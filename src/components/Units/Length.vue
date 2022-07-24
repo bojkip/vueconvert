@@ -60,14 +60,13 @@
             filled
             label="To Unit"
             placeholder="Milimeter or mm"
-          
           ></v-autocomplete>
         </v-col>
       </v-row>
       </v-container>
-    <v-container>
-      <v-row>
-        <v-col>
+    <v-container class="mx-10" fluid>
+      <v-row justify="center">
+        <v-col  xl="4" lg="4" sm="4">
           <v-switch
             v-model="showAreaUnits"
             inset
@@ -76,7 +75,7 @@
             :disabled="disAreaBtn"
           ></v-switch>
         </v-col>
-        <v-col>
+        <v-col  xl="2" lg="2" sm="2">
           <v-switch
             v-model="showVolumeUnits"
             inset
