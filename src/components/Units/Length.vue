@@ -154,8 +154,8 @@ export default {
     },
     SetAreaItems(){
       if (this.showAreaUnits === true) {
-        this.itemsIn = [ 'Square Milimeter(mm)', 'Square Centimeter(cm)', 'Square Decimeter(dm)', 'Hectare(ha)', 'Meter(m)', 'Square Kilometer(km)', 'Acre(ac)', 'Are', 'Square Inch(in)', 'Square Feet(ft)', 'Square Yard(yd)', 'Square Mile(mi)' ];
-        this.itemsOut = [ 'Square Milimeter(mm)', 'Square Centimeter(cm)', 'Square Decimeter(dm)', 'Hectare(ha)', 'Meter(m)', 'Square Kilometer(km)', 'Acre(ac)', 'Are', 'Square Inch(in)', 'Square Feet(ft)', 'Square Yard(yd)', 'Square Mile(mi)' ];
+        this.itemsIn = [ 'Milimeter(mm)', 'Centimeter(cm)', 'Decimeter(dm)', 'Hectare(ha)', 'Meter(m)', 'Kilometer(km)', 'Acre(ac)', 'Are', 'Inch(in)', 'Feet(ft)', 'Yard(yd)', 'Mile(mi)' ];
+        this.itemsOut = [ 'Milimeter(mm)', 'Centimeter(cm)', 'Decimeter(dm)', 'Hectare(ha)', 'Meter(m)', 'Kilometer(km)', 'Acre(ac)', 'Are', 'Inch(in)', 'Feet(ft)', 'Yard(yd)', ' Mile(mi)' ];
         this.disUnitPow = true;
         this.disVolumeBtn = true,
         this.unitPow = 2;
@@ -170,8 +170,8 @@ export default {
     },
     SetVolumeItems(){
             if (this.showVolumeUnits === true) {
-                this.itemsIn = [ 'Cubic Milimeter(mm)', 'Cubic Centimeter(cm)', 'Cubic Decimeter(dm)', 'Cubic Meter(m)', 'Cubic Kilometer(km)', 'Mililiter(ml)', 'Liter(l)', 'Deciliter(dl)', 'Cup US', 'Gallon US (gal)', 'Teaspoon US', 'Tablespoon US'  ],
-                this.itemsOut = [ 'Cubic Milimeter(mm)', 'Cubic Centimeter(cm)', 'Cubic Decimeter(dm3)', 'Cubic Meter(m)', 'Cubic Kilometer(km)', 'Mililiter(ml)', 'Liter(l)', 'Deciliter(dl)', 'Cup US', 'Gallon US (gal)', 'Teaspoon US', 'Tablespoon US'  ],
+                this.itemsIn = [ 'Milimeter(mm)', 'Centimeter(cm)', 'Decimeter(dm)', 'Meter(m)', 'Kilometer(km)', 'Mililiter(ml)', 'Liter(l)', 'Deciliter(dl)', 'Cup US', 'Gallon US (gal)', 'Teaspoon US', 'Tablespoon US'  ],
+                this.itemsOut = [ 'Milimeter(mm)', 'Centimeter(cm)', 'Decimeter(dm)', 'Meter(m)', 'Kilometer(km)', 'Mililiter(ml)', 'Liter(l)', 'Deciliter(dl)', 'Cup US', 'Gallon US (gal)', 'Teaspoon US', 'Tablespoon US'  ],
                 this.disUnitPow = true;
                 this.disAreaBtn = true;
                 this.unitPow = 3;
@@ -1907,413 +1907,1733 @@ export default {
         }
       }
 
-      else if (this.valueIn === ' Milimeter(mm3)' && this.valueOut === ' Centimeter(cm3)') {
-                return parseFloat(this.inputNum) * 0.001;
-            }
-            else if (this.valueIn === ' Milimeter(mm3)' && this.valueOut === ' Decimeter(dm3)') {
-                return parseFloat(this.inputNum) * 0.000001;
-            }
-            else if (this.valueIn === ' Milimeter(mm3)' && this.valueOut === ' Meter(m3)') {
-                return parseFloat(this.inputNum) * 0.000000001;
-            }
-            else if (this.valueIn === ' Milimeter(mm3)' && this.valueOut === ' Kilometer(km3)') {
-                return parseFloat(this.inputNum) * 0.000000000000000001;
-            }
-            else if (this.valueIn === ' Milimeter(mm3)' && this.valueOut === 'Mililiter(ml)') {
-                return parseFloat(this.inputNum) * 0.001;
-            }
-            else if (this.valueIn === ' Milimeter(mm3)' && this.valueOut === 'Liter(l)') {
-                return parseFloat(this.inputNum) * 0.000001;
-            }
-            else if (this.valueIn === ' Milimeter(mm3)' && this.valueOut === 'Deciliter(dl)') {
-                return parseFloat(this.inputNum) * 0.00001;
-            }
-            else if (this.valueIn === ' Milimeter(mm3)' && this.valueOut === 'Cup US') {
-                return parseFloat(this.inputNum) * 0.0000042268;
-            }
-            else if (this.valueIn === ' Milimeter(mm3)' && this.valueOut === 'Gallon US (gal)') {
-                return parseFloat(this.inputNum) * 0.0000002641722;
-            }
-            else if (this.valueIn === ' Milimeter(mm3)' && this.valueOut === 'Teaspoon US') {
-                return parseFloat(this.inputNum) * 0.0002028841;
-            }
-            else if (this.valueIn === ' Milimeter(mm3)' && this.valueOut === 'Tablespoon US') {
-                return parseFloat(this.inputNum) * 0.000067628;
-            }
-            
-            else if (this.valueIn === ' Centimeter(cm3)' && this.valueOut === ' Milimeter(mm3)') {
-                return parseFloat(this.inputNum) * 1000;
-            }
-            else if (this.valueIn === ' Centimeter(cm3)' && this.valueOut === ' Decimeter(dm3)') {
-                return parseFloat(this.inputNum) * 0.001;
-            }
-            else if (this.valueIn === ' Centimeter(cm3)' && this.valueOut === ' Meter(m3)') {
-                return parseFloat(this.inputNum) * 0.000001;
-            }
-            else if (this.valueIn === ' Milimeter(mm3)' && this.valueOut === ' Kilometer(km3)') {
-                return parseFloat(this.inputNum) * 0.000000000000001;
-            }
-            else if (this.valueIn === ' Centimeter(cm3)' && this.valueOut === 'Mililiter(ml)') {
-                return parseFloat(this.inputNum) * 1;
-                }
-            else if (this.valueIn === ' Centimeter(cm3)' && this.valueOut === 'Liter(l)') {
-                return parseFloat(this.inputNum) * 0.001;
-            }
-            else if (this.valueIn === ' Centimeter(cm3)' && this.valueOut === 'Deciliter(dl)') {
-                return parseFloat(this.inputNum) * 0.01;
-            }
-            else if (this.valueIn === ' Centimeter(cm3)' && this.valueOut === 'Cup US') {
-                return parseFloat(this.inputNum) * 0.0042267528;
-            }
-            else if (this.valueIn === ' Centimeter(cm3)' && this.valueOut === 'Gallon US (gal)') {
-                return parseFloat(this.inputNum) * 0.0002641721;
-            }
-            else if (this.valueIn === ' Centimeter(cm3)' && this.valueOut === 'Teaspoon US') {
-                return parseFloat(this.inputNum) * 0.2028841362;
-            }
-            else if (this.valueIn === ' Centimeter(cm3)' && this.valueOut === 'Tablespoon US') {
-                return parseFloat(this.inputNum) * 0.0676280454;
-            }
+      else if (this.valueIn === ' Milimeter(mm)' && this.valueOut === ' Centimeter(cm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+            return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.001, this.unitPow) ;
+          }
+          else if (this.userPow != ''){
+            return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.001;
+          }
+          else if (this.unitPow != ''){
+            return parseFloat(this.inputNum) * Math.pow(0.001, this.unitPow) ;
+          } else {
+            return parseFloat(this.inputNum) * 0.001;
+          }
+        }
+      else if (this.valueIn === ' Milimeter(mm)' && this.valueOut === ' Decimeter(dm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.000001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.000001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.000001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.000001;
+        }
+      }
+      else if (this.valueIn === ' Milimeter(mm)' && this.valueOut === ' Meter(m)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.000000001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.000000001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.000000001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.000000001;
+        }
+      }
+      else if (this.valueIn === ' Milimeter(mm)' && this.valueOut === ' Kilometer(km)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.000000000000000001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.000000000000000001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.000000000000000001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.000000000000000001;
+        }
+      }
+      else if (this.valueIn === ' Milimeter(mm)' && this.valueOut === 'Mililiter(ml)') {
+        if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow( 0.001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) *  0.001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow( 0.001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) *  0.001;
+        }
+      }
+      else if (this.valueIn === ' Milimeter(mm)' && this.valueOut === 'Liter(l)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.000001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.000001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.000001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.000001;
+        }
+      }
+      else if (this.valueIn === ' Milimeter(mm)' && this.valueOut === 'Deciliter(dl)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.00001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.00001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.00001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.00001;
+        }
+      }
+      else if (this.valueIn === ' Milimeter(mm)' && this.valueOut === 'Cup US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0000042268, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0000042268;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0000042268, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0000042268;
+        }
+      }
+      else if (this.valueIn === ' Milimeter(mm)' && this.valueOut === 'Gallon US (gal)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0000002641722, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0000002641722;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0000002641722, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0000002641722;
+        }
+      }
+      else if (this.valueIn === ' Milimeter(mm)' && this.valueOut === 'Teaspoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0002028841, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0002028841;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0002028841, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0002028841;
+        }
+      }
+      else if (this.valueIn === ' Milimeter(mm)' && this.valueOut === 'Tablespoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.000067628, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.000067628;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.000067628, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.000067628;
+        }
+      }
+      
+      else if (this.valueIn === ' Centimeter(cm)' && this.valueOut === ' Milimeter(mm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000;
+        }
+      }
+      else if (this.valueIn === ' Centimeter(cm)' && this.valueOut === ' Decimeter(dm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.001;
+        }
+      }
+      else if (this.valueIn === ' Centimeter(cm)' && this.valueOut === ' Meter(m)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.000001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.000001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.000001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.000001;
+        }
+      }
+      else if (this.valueIn === ' Milimeter(mm)' && this.valueOut === ' Kilometer(km)') {
+        if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.000000000000001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.000000000000001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.000000000000001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.000000000000001;
+        }
+      }
+      else if (this.valueIn === ' Centimeter(cm)' && this.valueOut === 'Mililiter(ml)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1;
+        }
+          }
+      else if (this.valueIn === ' Centimeter(cm)' && this.valueOut === 'Liter(l)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.001;
+        }
+      }
+      else if (this.valueIn === ' Centimeter(cm)' && this.valueOut === 'Deciliter(dl)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.01, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.01;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.01, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.01;
+        }
+      }
+      else if (this.valueIn === ' Centimeter(cm)' && this.valueOut === 'Cup US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0042267528, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0042267528;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0042267528, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0042267528;
+        }
+      }
+      else if (this.valueIn === ' Centimeter(cm)' && this.valueOut === 'Gallon US (gal)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0002641721, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0002641721;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0002641721, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0002641721;
+        }
+      }
+      else if (this.valueIn === ' Centimeter(cm)' && this.valueOut === 'Teaspoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.2028841362, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.2028841362;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.2028841362, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.2028841362;
+        }
+      }
+      else if (this.valueIn === ' Centimeter(cm)' && this.valueOut === 'Tablespoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0676280454, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0676280454;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0676280454, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0676280454;
+        }
+      }
 
-            else if (this.valueIn === ' Decimeter(dm3)' && this.valueOut === ' Milimeter(mm3)') {
-                return parseFloat(this.inputNum) * 1000000;
-            }
-            else if (this.valueIn === ' Decimeter(dm3)' && this.valueOut === ' Centimeter(cm3)') {
-                return parseFloat(this.inputNum) * 1000;
-            }
-            else if (this.valueIn === ' Decimeter(dm3)' && this.valueOut === ' Meter(m3)') {
-                return parseFloat(this.inputNum) * 0.001;
-            }
-            else if (this.valueIn === ' Decimeter(dm3)' && this.valueOut === ' Kilometer(km3)') {
-                return parseFloat(this.inputNum) * 0.000000000001;
-            }
-            else if (this.valueIn === ' Decimeter(dm3)' && this.valueOut === 'Mililiter(ml)') {
-                return parseFloat(this.inputNum) * 1000;
-                }
-            else if (this.valueIn === ' Decimeter(dm3)' && this.valueOut === 'Liter(l)') {
-                return parseFloat(this.inputNum) * 1;
-            }
-            else if (this.valueIn === ' Decimeter(dm3)' && this.valueOut === 'Deciliter(dl)') {
-                return parseFloat(this.inputNum) * 10;
-            }
-            else if (this.valueIn === ' Decimeter(dm3)' && this.valueOut === 'Cup US') {
-                return parseFloat(this.inputNum) * 4.2267528377;
-            }
-            else if (this.valueIn === ' Decimeter(dm3)' && this.valueOut === 'Gallon US (gal)') {
-                return parseFloat(this.inputNum) * 0.2641720524;
-            }
-            else if (this.valueIn === ' Decimeter(dm3)' && this.valueOut === 'Teaspoon US') {
-                return parseFloat(this.inputNum) * 202.88413621;
-            }
-            else if (this.valueIn === ' Decimeter(dm3)' && this.valueOut === 'Tablespoon US') {
-                return parseFloat(this.inputNum) * 67.628045404;
-            }
+      else if (this.valueIn === ' Decimeter(dm)' && this.valueOut === ' Milimeter(mm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000000;
+        }
+      }
+      else if (this.valueIn === ' Decimeter(dm)' && this.valueOut === ' Centimeter(cm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000;
+        }
+ž      }
+      else if (this.valueIn === ' Decimeter(dm)' && this.valueOut === ' Meter(m)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.001;
+        }
+      }
+      else if (this.valueIn === ' Decimeter(dm)' && this.valueOut === ' Kilometer(km)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.000000000001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.000000000001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.000000000001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.000000000001;
+        }
+      }
+      else if (this.valueIn === ' Decimeter(dm)' && this.valueOut === 'Mililiter(ml)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000;
+        }
+          }
+      else if (this.valueIn === ' Decimeter(dm)' && this.valueOut === 'Liter(l)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1;
+        }
+      }
+      else if (this.valueIn === ' Decimeter(dm)' && this.valueOut === 'Deciliter(dl)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(10, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 10;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(10, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 10;
+        }
+      }
+      else if (this.valueIn === ' Decimeter(dm)' && this.valueOut === 'Cup US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(4.2267528377, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 4.2267528377;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(4.2267528377, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 4.2267528377;
+        }
+      }
+      else if (this.valueIn === ' Decimeter(dm)' && this.valueOut === 'Gallon US (gal)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.2641720524, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.2641720524;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.2641720524, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.2641720524;
+        }
+      }
+      else if (this.valueIn === ' Decimeter(dm)' && this.valueOut === 'Teaspoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(202.88413621, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 202.88413621;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(202.88413621, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 202.88413621;
+        }
+      }
+      else if (this.valueIn === ' Decimeter(dm)' && this.valueOut === 'Tablespoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(67.628045404, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 67.628045404;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(67.628045404, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 67.628045404;
+        }
+      }
 
-            else if (this.valueIn === ' Meter(m3)' && this.valueOut === ' Milimeter(mm3)') {
-                return parseFloat(this.inputNum) * 1000000000;
-            }
-            else if (this.valueIn === ' Meter(m3)' && this.valueOut === ' Centimeter(cm3)') {
-                return parseFloat(this.inputNum) * 1000000;
-            }
-            else if (this.valueIn === ' Meter(m3)' && this.valueOut === ' Decimeter(dm3)') {
-                return parseFloat(this.inputNum) * 1000;
-            }
-            else if (this.valueIn === ' Meter(m3)' && this.valueOut === ' Kilometer(km3)') {
-                return parseFloat(this.inputNum) * 0.000000001;
-            }
-            else if (this.valueIn === ' Meter(m3)' && this.valueOut === 'Mililiter(ml)') {
-                return parseFloat(this.inputNum) * 1000000;
-                }
-            else if (this.valueIn === ' Meter(m3)' && this.valueOut === 'Liter(l)') {
-                return parseFloat(this.inputNum) * 1000;
-            }
-            else if (this.valueIn === ' Meter(m3)' && this.valueOut === 'Deciliter(dl)') {
-                return parseFloat(this.inputNum) * 10000;
-            }
-            else if (this.valueIn === ' Meter(m3)' && this.valueOut === 'Cup US') {
-                return parseFloat(this.inputNum) * 4226.7528377;
-            }
-            else if (this.valueIn === ' Meter(m3)' && this.valueOut === 'Gallon US (gal)') {
-                return parseFloat(this.inputNum) * 264.17205236;
-            }
-            else if (this.valueIn === ' Meter(m3)' && this.valueOut === 'Teaspoon US') {
-                return parseFloat(this.inputNum) * 202884.13621;
-            }
-            else if (this.valueIn === ' Meter(m3)' && this.valueOut === 'Tablespoon US') {
-                return parseFloat(this.inputNum) * 67628.045404;
-            }
+      else if (this.valueIn === ' Meter(m)' && this.valueOut === ' Milimeter(mm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000000000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000000000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000000000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000000000;
+        }
+      }
+      else if (this.valueIn === ' Meter(m)' && this.valueOut === ' Centimeter(cm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000000;
+        }
+      }
+      else if (this.valueIn === ' Meter(m)' && this.valueOut === ' Decimeter(dm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000;
+        }
+      }
+      else if (this.valueIn === ' Meter(m)' && this.valueOut === ' Kilometer(km)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.000000001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.000000001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.000000001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.000000001;
+        }
+      }
+      else if (this.valueIn === ' Meter(m)' && this.valueOut === 'Mililiter(ml)') {
+          if (this.unitPow != '' && this.userPow != '') {
+            return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000000, this.unitPow) ;
+          }
+          else if (this.userPow != ''){
+            return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000000;
+          }
+          else if (this.unitPow != ''){
+            return parseFloat(this.inputNum) * Math.pow(1000000, this.unitPow) ;
+          } else {
+            return parseFloat(this.inputNum) * 1000000;
+          }
+        }
+      else if (this.valueIn === ' Meter(m)' && this.valueOut === 'Liter(l)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000;
+        }
+      }
+      else if (this.valueIn === ' Meter(m)' && this.valueOut === 'Deciliter(dl)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(10000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 10000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(10000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 10000;
+        }
+      }
+      else if (this.valueIn === ' Meter(m)' && this.valueOut === 'Cup US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(4226.7528377, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 4226.7528377;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(4226.7528377, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 4226.7528377;
+        }
+      }
+      else if (this.valueIn === ' Meter(m)' && this.valueOut === 'Gallon US (gal)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(264.17205236, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 264.17205236;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(264.17205236, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 264.17205236;
+        }
+      }
+      else if (this.valueIn === ' Meter(m)' && this.valueOut === 'Teaspoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(202884.13621, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 202884.13621;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(202884.13621, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 202884.13621;
+        }
+      }
+      else if (this.valueIn === ' Meter(m)' && this.valueOut === 'Tablespoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(67628.045404, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 67628.045404;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(67628.045404, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 67628.045404;
+        }
+      }
 
-            else if (this.valueIn === ' Kilometer(km3)' && this.valueOut === ' Milimeter(mm3)') {
-                return parseFloat(this.inputNum) * 1000000000000000000;
-            }
-            else if (this.valueIn === ' Kilometer(km3)' && this.valueOut === ' Centimeter(cm3)') {
-                return parseFloat(this.inputNum) * 1000000000000000;
-            }
-            else if (this.valueIn === ' Kilometer(km3)' && this.valueOut === ' Decimeter(dm3)') {
-                return parseFloat(this.inputNum) * 1000000000000;
-            }
-            else if (this.valueIn === ' Kilometer(km3)' && this.valueOut === ' Meter(m3)') {
-                return parseFloat(this.inputNum) * 1000000000;
-            }
-            else if (this.valueIn === ' Kilometer(km3)' && this.valueOut === 'Mililiter(ml)') {
-                return parseFloat(this.inputNum) * 1000000000000000;
-                }
-            else if (this.valueIn === ' Kilometer(km3)' && this.valueOut === 'Liter(l)') {
-                return parseFloat(this.inputNum) * 1000000000000;
-            }
-            else if (this.valueIn === ' Kilometer(km3)' && this.valueOut === 'Deciliter(dl)') {
-                return parseFloat(this.inputNum) * 10000000000000;
-            }
-            else if (this.valueIn === ' Kilometer(km3)' && this.valueOut === 'Cup US') {
-                return parseFloat(this.inputNum) * 4226752837730;
-            }
-            else if (this.valueIn === ' Kilometer(km3)' && this.valueOut === 'Gallon US (gal)') {
-                return parseFloat(this.inputNum) * 264172052358;
-            }
-            else if (this.valueIn === ' Kilometer(km3)' && this.valueOut === 'Teaspoon US') {
-                return parseFloat(this.inputNum) * 202884136211060;
-            }
-            else if (this.valueIn === ' Kilometer(km3)' && this.valueOut === 'Tablespoon US') {
-                return parseFloat(this.inputNum) * 67628045403686;
-            }
+      else if (this.valueIn === ' Kilometer(km)' && this.valueOut === ' Milimeter(mm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000000000000000000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000000000000000000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000000000000000000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000000000000000000;
+        }
+      }
+      else if (this.valueIn === ' Kilometer(km)' && this.valueOut === ' Centimeter(cm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000000000000000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000000000000000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000000000000000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000000000000000;
+        }
+      }
+      else if (this.valueIn === ' Kilometer(km)' && this.valueOut === ' Decimeter(dm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000000000000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000000000000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000000000000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000000000000;
+        }
+      }
+      else if (this.valueIn === ' Kilometer(km)' && this.valueOut === ' Meter(m)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000000000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000000000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000000000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000000000;
+        }
+      }
+      else if (this.valueIn === ' Kilometer(km)' && this.valueOut === 'Mililiter(ml)') {
+          if (this.unitPow != '' && this.userPow != '') {
+            return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000000000000000, this.unitPow) ;
+          }
+          else if (this.userPow != ''){
+            return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000000000000000;
+          }
+          else if (this.unitPow != ''){
+            return parseFloat(this.inputNum) * Math.pow(1000000000000000, this.unitPow) ;
+          } else {
+            return parseFloat(this.inputNum) * 1000000000000000;
+          }
+        }
+      else if (this.valueIn === ' Kilometer(km)' && this.valueOut === 'Liter(l)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000000000000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000000000000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000000000000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000000000000;
+        }
+      }
+      else if (this.valueIn === ' Kilometer(km)' && this.valueOut === 'Deciliter(dl)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(10000000000000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 10000000000000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(10000000000000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 10000000000000;
+        }
+      }
+      else if (this.valueIn === ' Kilometer(km)' && this.valueOut === 'Cup US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(4226752837730, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 4226752837730;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(4226752837730, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 4226752837730;
+        }
+      }
+      else if (this.valueIn === ' Kilometer(km)' && this.valueOut === 'Gallon US (gal)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(264172052358, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 264172052358;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(264172052358, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 264172052358;
+        }
+      }
+      else if (this.valueIn === ' Kilometer(km)' && this.valueOut === 'Teaspoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(202884136211060, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 202884136211060;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(202884136211060, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 202884136211060;
+        }
+      }
+      else if (this.valueIn === ' Kilometer(km)' && this.valueOut === 'Tablespoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(67628045403686, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 67628045403686;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(67628045403686, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 67628045403686;
+        }
+      }
 
-            else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === ' Milimeter(mm3)') {
-                return parseFloat(this.inputNum) * 1000;
-            }
-            else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === ' Centimeter(cm3)') {
-                return parseFloat(this.inputNum) * 1;
-            }
-            else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === ' Decimeter(dm3)') {
-                return parseFloat(this.inputNum) * 0.001;
-            }
-            else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === ' Meter(m3)') {
-                return parseFloat(this.inputNum) * 0.000001;
-            }
-            else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === ' Kilometer(km3)') {
-                return parseFloat(this.inputNum) * 0.0000000000000001;
-                }
-            else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === 'Liter(l)') {
-                return parseFloat(this.inputNum) * 0.001;
-            }
-            else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === 'Deciliter(dl)') {
-                return parseFloat(this.inputNum) * 0.01;
-            }
-            else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === 'Cup US') {
-                return parseFloat(this.inputNum) * 0.0042267528;
-            }
-            else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === 'Gallon US (gal)') {
-                return parseFloat(this.inputNum) * 0.0002641721;
-            }
-            else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === 'Teaspoon US') {
-                return parseFloat(this.inputNum) * 0.2028841362;
-            }
-            else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === 'Tablespoon US') {
-                return parseFloat(this.inputNum) * 0.0676280454;
-            }
+      else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === ' Milimeter(mm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000;
+        }
+      }
+      else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === ' Centimeter(cm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1;
+        }
+      }
+      else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === ' Decimeter(dm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.001;
+        }
+      }
+      else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === ' Meter(m)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.000001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.000001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.000001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.000001;
+        }
+      }
+      else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === ' Kilometer(km)') {
+          if (this.unitPow != '' && this.userPow != '') {
+            return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0000000000000001, this.unitPow) ;
+          }
+          else if (this.userPow != ''){
+            return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0000000000000001;
+          }
+          else if (this.unitPow != ''){
+            return parseFloat(this.inputNum) * Math.pow(0.0000000000000001, this.unitPow) ;
+          } else {
+            return parseFloat(this.inputNum) * 0.0000000000000001;
+          }
+        }
+      else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === 'Liter(l)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.001;
+        }
+      }
+      else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === 'Deciliter(dl)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.01, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.01;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.01, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.01;
+        }
+      }
+      else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === 'Cup US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0042267528, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0042267528;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0042267528, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0042267528;
+        }
+      }
+      else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === 'Gallon US (gal)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0002641721, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0002641721;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0002641721, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0002641721;
+        }
+      }
+      else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === 'Teaspoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.2028841362, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.2028841362;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.2028841362, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.2028841362;
+        }
+      }
+      else if (this.valueIn === 'Mililiter(ml)' && this.valueOut === 'Tablespoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0676280454, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0676280454;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0676280454, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0676280454;
+        }
+      }
 
-            else if (this.valueIn === 'Liter(l)' && this.valueOut === ' Milimeter(mm3)') {
-                return parseFloat(this.inputNum) * 1000000;
-            }
-            else if (this.valueIn === 'Liter(l)' && this.valueOut === ' Centimeter(cm3)') {
-                return parseFloat(this.inputNum) * 1000000;
-            }
-            else if (this.valueIn === 'Liter(l)' && this.valueOut === ' Decimeter(dm3)') {
-                return parseFloat(this.inputNum) * 1;
-            }
-            else if (this.valueIn === 'Liter(l)' && this.valueOut === ' Meter(m3)') {
-                return parseFloat(this.inputNum) * 0.001;
-            }
-            else if (this.valueIn === 'Liter(l)' && this.valueOut === ' Kilometer(km3)') {
-                return parseFloat(this.inputNum) * 0.000000000001;
-                }
-            else if (this.valueIn === 'Liter(l)' && this.valueOut === 'Mililiter(ml)') {
-                return parseFloat(this.inputNum) * 1000;
-            }
-            else if (this.valueIn === 'Liter(l)' && this.valueOut === 'Deciliter(dl)') {
-                return parseFloat(this.inputNum) * 10;
-            }
-            else if (this.valueIn === 'Liter(l)' && this.valueOut === 'Cup US') {
-                return parseFloat(this.inputNum) * 4.2267528377;
-            }
-            else if (this.valueIn === 'Liter(l)' && this.valueOut === 'Gallon US (gal)') {
-                return parseFloat(this.inputNum) * 0.2641720524;
-            }
-            else if (this.valueIn === 'Liter(l)' && this.valueOut === 'Teaspoon US') {
-                return parseFloat(this.inputNum) * 202.88413621;
-            }
-            else if (this.valueIn === 'Liter(l)' && this.valueOut === 'Tablespoon US') {
-                return parseFloat(this.inputNum) * 67.628045404;
-            }
+      else if (this.valueIn === 'Liter(l)' && this.valueOut === ' Milimeter(mm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000000;
+        }
+      }
+      else if (this.valueIn === 'Liter(l)' && this.valueOut === ' Centimeter(cm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000000;
+        }
+      }
+      else if (this.valueIn === 'Liter(l)' && this.valueOut === ' Decimeter(dm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1;
+        }
+      }
+      else if (this.valueIn === 'Liter(l)' && this.valueOut === ' Meter(m)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.001;
+        }
+      }
+      else if (this.valueIn === 'Liter(l)' && this.valueOut === ' Kilometer(km)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.000000000001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.000000000001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.000000000001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.000000000001;
+        }
+          }
+      else if (this.valueIn === 'Liter(l)' && this.valueOut === 'Mililiter(ml)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(1000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(1000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 1000;
+        }
+      }
+      else if (this.valueIn === 'Liter(l)' && this.valueOut === 'Deciliter(dl)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(10, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 10;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(10, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 10;
+        }
+      }
+      else if (this.valueIn === 'Liter(l)' && this.valueOut === 'Cup US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(4.2267528377, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 4.2267528377;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(4.2267528377, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 4.2267528377;
+        }
+      }
+      else if (this.valueIn === 'Liter(l)' && this.valueOut === 'Gallon US (gal)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.2641720524, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.2641720524;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.2641720524, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.2641720524;
+        }
+      }
+      else if (this.valueIn === 'Liter(l)' && this.valueOut === 'Teaspoon US') {
+        if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(202.88413621, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 202.88413621;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(202.88413621, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 202.88413621;
+        }
+      }
+      else if (this.valueIn === 'Liter(l)' && this.valueOut === 'Tablespoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(67.628045404, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 67.628045404;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(67.628045404, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 67.628045404;
+        }
+      }
 
-            else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === ' Milimeter(mm3)') {
-                return parseFloat(this.inputNum) * 100000;
-            }
-            else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === ' Centimeter(cm3)') {
-                return parseFloat(this.inputNum) * 100;
-            }
-            else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === ' Decimeter(dm3)') {
-                return parseFloat(this.inputNum) * 0.1;
-            }
-            else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === ' Meter(m3)') {
-                return parseFloat(this.inputNum) * 0.0001;
-            }
-            else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === ' Kilometer(km3)') {
-                return parseFloat(this.inputNum) * 0.0000000000001;
-                }
-            else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === 'Mililiter(ml)') {
-                return parseFloat(this.inputNum) * 100;
-            }
-            else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === 'Liter(l)') {
-                return parseFloat(this.inputNum) * 0.1;
-            }
-            else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === 'Cup US') {
-                return parseFloat(this.inputNum) * 0.4226752838;
-            }
-            else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === 'Gallon US (gal)') {
-                return parseFloat(this.inputNum) * 0.0264172052;
-            }
-            else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === 'Teaspoon US') {
-                return parseFloat(this.inputNum) * 20.288413621;
-            }
-            else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === 'Tablespoon US') {
-                return parseFloat(this.inputNum) * 6.7628045404;
-            }
+      else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === ' Milimeter(mm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(100000, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 100000;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(100000, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 100000;
+        }
+      }
+      else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === ' Centimeter(cm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(100, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 100;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(100, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 100;
+        }
+      }
+      else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === ' Decimeter(dm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.1, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.1;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.1, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.1;
+        }
+      }
+      else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === ' Meter(m)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0001;
+        }
+      }
+      else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === ' Kilometer(km)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0000000000001, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0000000000001;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0000000000001, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0000000000001;
+        }
+          }
+      else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === 'Mililiter(ml)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(100, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 100;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(100, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 100;
+        }
+      }
+      else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === 'Liter(l)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.1, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.1;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.1, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.1;
+        }
+      }
+      else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === 'Cup US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.4226752838, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.4226752838;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.4226752838, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.4226752838;
+        }
+      }
+      else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === 'Gallon US (gal)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0264172052, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0264172052;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0264172052, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0264172052;
+        }
+      }
+      else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === 'Teaspoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(20.288413621, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 20.288413621;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(20.288413621, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 20.288413621;
+        }
+      }
+      else if (this.valueIn === 'Deciliter(dl)' && this.valueOut === 'Tablespoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(6.7628045404, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 6.7628045404;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(6.7628045404, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 6.7628045404;
+        }
+      }
+      else if (this.valueIn === 'Cup US' && this.valueOut === ' Milimeter(mm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(236588.2365, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 236588.2365;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(236588.2365, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 236588.2365;
+        }
+      }
+      else if (this.valueIn === 'Cup US' && this.valueOut === ' Centimeter(cm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(236.5882365, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 236.5882365;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(236.5882365, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 236.5882365;
+        }
+      }
+      else if (this.valueIn === 'Cup US' && this.valueOut === ' Decimeter(dm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.2365882365, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.2365882365;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.2365882365, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.2365882365;
+        }
+      }
+      else if (this.valueIn === 'Cup US' && this.valueOut === ' Meter(m)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0002365882, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0002365882;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0002365882, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0002365882;
+        }
+      }
+      else if (this.valueIn === 'Cup US' && this.valueOut === ' Kilometer(km)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0000000000002365882, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0000000000002365882;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0000000000002365882, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0000000000002365882;
+        }
+          return parseFloat(this.inputNum) * 0.0000000000002365882;
+          }
+      else if (this.valueIn === 'Cup US' && this.valueOut === 'Mililiter(ml)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(236.5882365, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 236.5882365;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(236.5882365, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 236.5882365;
+        }
+      }
+      else if (this.valueIn === 'Cup US' && this.valueOut === 'Liter(l)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.2365882365, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.2365882365;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.2365882365, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.2365882365;
+        }
+      }
+      else if (this.valueIn === 'Cup US' && this.valueOut === 'Deciliter(dl)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(2.365882365, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 2.365882365;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(2.365882365, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 2.365882365;
+        }
+      }
+      else if (this.valueIn === 'Cup US' && this.valueOut === 'Gallon US (gal)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0625, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0625;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0625, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0625;
+        }
+      }
+      else if (this.valueIn === 'Cup US' && this.valueOut === 'Teaspoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(48, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 48;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(48, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 48;
+        }
+      }
+      else if (this.valueIn === 'Cup US' && this.valueOut === 'Tablespoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(16, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 16;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(16, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 16;
+        }
+      }
+      
+      else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === ' Milimeter(mm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(3785411.784, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 3785411.784;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(3785411.784, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 3785411.784;
+        }
+      }
+      else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === ' Centimeter(cm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(3785.4118, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 3785.4118;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(3785.4118, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 3785.4118;
+        }
+      }
+      else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === ' Decimeter(dm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(3.7854118, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 3.7854118;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(3.7854118, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 3.7854118;
+        }
+      }
+      else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === ' Meter(m)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0037854118, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0037854118;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0037854118, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0037854118;
+        }
+      }
+      else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === ' Kilometer(km)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0000000000037854118, this.unitPow) ;
+          }
+          else if (this.userPow != ''){
+            return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0000000000037854118;
+          }
+          else if (this.unitPow != ''){
+            return parseFloat(this.inputNum) * Math.pow(0.0000000000037854118, this.unitPow) ;
+          } else {
+            return parseFloat(this.inputNum) * 0.0000000000037854118;
+          }
+        }
+      else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === 'Mililiter(ml)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(3785.411784, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 3785.411784;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(3785.411784, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 3785.411784;
+        }
+      }
+      else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === 'Liter(l)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(3.785411784, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 3.785411784;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(3.785411784, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 3.785411784;
+        }
+      }
+      else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === 'Deciliter(dl)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(37.85411784, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 37.85411784;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(37.85411784, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 37.85411784;
+        }
+      }
+      else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === 'Cup US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(16, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 16;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(16, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 16;
+        }
+      }
+      else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === 'Teaspoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(768, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 768;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(768, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 768;
+        }
+      }
+      else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === 'Tablespoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(256, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 256;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(256, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 256;
+        }
+      }
 
-            else if (this.valueIn === 'Cup US' && this.valueOut === ' Milimeter(mm3)') {
-                return parseFloat(this.inputNum) * 236588.2365;
-            }
-            else if (this.valueIn === 'Cup US' && this.valueOut === ' Centimeter(cm3)') {
-                return parseFloat(this.inputNum) * 236.5882365;
-            }
-            else if (this.valueIn === 'Cup US' && this.valueOut === ' Decimeter(dm3)') {
-                return parseFloat(this.inputNum) * 0.2365882365;
-            }
-            else if (this.valueIn === 'Cup US' && this.valueOut === ' Meter(m3)') {
-                return parseFloat(this.inputNum) * 0.0002365882;
-            }
-            else if (this.valueIn === 'Cup US' && this.valueOut === ' Kilometer(km3)') {
-                return parseFloat(this.inputNum) * 0.0000000000002365882;
-                }
-            else if (this.valueIn === 'Cup US' && this.valueOut === 'Mililiter(ml)') {
-                return parseFloat(this.inputNum) * 236.5882365;
-            }
-            else if (this.valueIn === 'Cup US' && this.valueOut === 'Liter(l)') {
-                return parseFloat(this.inputNum) * 0.2365882365;
-            }
-            else if (this.valueIn === 'Cup US' && this.valueOut === 'Deciliter(dl)') {
-                return parseFloat(this.inputNum) * 2.365882365;
-            }
-            else if (this.valueIn === 'Cup US' && this.valueOut === 'Gallon US (gal)') {
-                return parseFloat(this.inputNum) * 0.0625;
-            }
-            else if (this.valueIn === 'Cup US' && this.valueOut === 'Teaspoon US') {
-                return parseFloat(this.inputNum) * 48;
-            }
-            else if (this.valueIn === 'Cup US' && this.valueOut === 'Tablespoon US') {
-                return parseFloat(this.inputNum) * 16;
-            }
-            
-            else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === ' Milimeter(mm3)') {
-                return parseFloat(this.inputNum) * 3785411.784;
-            }
-            else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === ' Centimeter(cm3)') {
-                return parseFloat(this.inputNum) * 3785.4118;
-            }
-            else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === ' Decimeter(dm3)') {
-                return parseFloat(this.inputNum) * 3.7854118;
-            }
-            else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === ' Meter(m3)') {
-                return parseFloat(this.inputNum) * 0.0037854118;
-            }
-            else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === ' Kilometer(km3)') {
-                return parseFloat(this.inputNum) * 0.0000000000037854118;
-                }
-            else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === 'Mililiter(ml)') {
-                return parseFloat(this.inputNum) * 3785.411784;
-            }
-            else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === 'Liter(l)') {
-                return parseFloat(this.inputNum) * 3.785411784;
-            }
-            else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === 'Deciliter(dl)') {
-                return parseFloat(this.inputNum) * 37.85411784;
-            }
-            else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === 'Cup US') {
-                return parseFloat(this.inputNum) * 16;
-            }
-            else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === 'Teaspoon US') {
-                return parseFloat(this.inputNum) * 768;
-            }
-            else if (this.valueIn === 'Gallon US (gal)' && this.valueOut === 'Tablespoon US') {
-                return parseFloat(this.inputNum) * 256;
-            }
+      else if (this.valueIn === 'Teaspoon US' && this.valueOut === ' Milimeter(mm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(4928.9215937, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 4928.9215937;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(4928.9215937, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 4928.9215937;
+        }
+      }
+      else if (this.valueIn === 'Teaspoon US' && this.valueOut === ' Centimeter(cm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(4.9289215937, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 4.9289215937;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(4.9289215937, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 4.9289215937;
+        }
+      }
+      else if (this.valueIn === 'Teaspoon US' && this.valueOut === ' Decimeter(dm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0049289216, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0049289216;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0049289216, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0049289216;
+        }
+      }
+      else if (this.valueIn === 'Teaspoon US' && this.valueOut === ' Meter(m)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.000004928, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.000004928;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.000004928, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.000004928;
+        }
+      }
+      else if (this.valueIn === 'Teaspoon US' && this.valueOut === ' Kilometer(km)') {
+          if (this.unitPow != '' && this.userPow != '') {
+            return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0000000000000049289, this.unitPow) ;
+          }
+          else if (this.userPow != ''){
+            return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0000000000000049289;
+          }
+          else if (this.unitPow != ''){
+            return parseFloat(this.inputNum) * Math.pow(0.0000000000000049289, this.unitPow) ;
+          } else {
+            return parseFloat(this.inputNum) * 0.0000000000000049289;
+          }
+        }
+      else if (this.valueIn === 'Teaspoon US' && this.valueOut === 'Mililiter(ml)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(4.9289215937, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 4.9289215937;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(4.9289215937, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 4.9289215937;
+        }
+      }
+      else if (this.valueIn === 'Teaspoon US' && this.valueOut === 'Liter(l)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0049289216, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0049289216;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0049289216, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0049289216;
+        }
+      }
+      else if (this.valueIn === 'Teaspoon US' && this.valueOut === 'Deciliter(dl)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0492892159, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0492892159;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0492892159, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0492892159;
+        }
+      }
+      else if (this.valueIn === 'Teaspoon US' && this.valueOut === 'Cup US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0208333333, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0208333333;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0208333333, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0208333333;
+        }
+      }
+      else if (this.valueIn === 'Teaspoon US' && this.valueOut === 'Gallon US (gal)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0013020833, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0013020833;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0013020833, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0013020833;
+        }
+      }
+      else if (this.valueIn === 'Teaspoon US' && this.valueOut === 'Tablespoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) / Math.pow(3, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) / 3;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) / Math.pow(3, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) / 3;
+        }
+      }
 
-            else if (this.valueIn === 'Teaspoon US' && this.valueOut === ' Milimeter(mm3)') {
-                return parseFloat(this.inputNum) * 4928.9215937;
-            }
-            else if (this.valueIn === 'Teaspoon US' && this.valueOut === ' Centimeter(cm3)') {
-                return parseFloat(this.inputNum) * 4.9289215937;
-            }
-            else if (this.valueIn === 'Teaspoon US' && this.valueOut === ' Decimeter(dm3)') {
-                return parseFloat(this.inputNum) * 0.0049289216;
-            }
-            else if (this.valueIn === 'Teaspoon US' && this.valueOut === ' Meter(m3)') {
-                return parseFloat(this.inputNum) * 0.000004928;
-            }
-            else if (this.valueIn === 'Teaspoon US' && this.valueOut === ' Kilometer(km3)') {
-                return parseFloat(this.inputNum) * 0.0000000000000049289;
-                }
-            else if (this.valueIn === 'Teaspoon US' && this.valueOut === 'Mililiter(ml)') {
-                return parseFloat(this.inputNum) * 4.9289215937;
-            }
-            else if (this.valueIn === 'Teaspoon US' && this.valueOut === 'Liter(l)') {
-                return parseFloat(this.inputNum) * 0.0049289216;
-            }
-            else if (this.valueIn === 'Teaspoon US' && this.valueOut === 'Deciliter(dl)') {
-                return parseFloat(this.inputNum) * 0.0492892159;
-            }
-            else if (this.valueIn === 'Teaspoon US' && this.valueOut === 'Cup US') {
-                return parseFloat(this.inputNum) * 0.0208333333;
-            }
-            else if (this.valueIn === 'Teaspoon US' && this.valueOut === 'Gallon US (gal)') {
-                return parseFloat(this.inputNum) * 0.0013020833;
-            }
-            else if (this.valueIn === 'Teaspoon US' && this.valueOut === 'Tablespoon US') {
-                return parseFloat(this.inputNum) / 3;
-            }
-
-            else if (this.valueIn === 'Tablespoon US' && this.valueOut === ' Milimeter(mm3)') {
-                return parseFloat(this.inputNum) * 14786.764781;
-            }
-            else if (this.valueIn === 'Tablespoon US' && this.valueOut === ' Centimeter(cm3)') {
-                return parseFloat(this.inputNum) * 14.786764781;
-            }
-            else if (this.valueIn === 'Tablespoon US' && this.valueOut === ' Decimeter(dm3)') {
-                return parseFloat(this.inputNum) * 0.0147867648;
-            }
-            else if (this.valueIn === 'Tablespoon US' && this.valueOut === ' Meter(m3)') {
-                return parseFloat(this.inputNum) * 0.0000147868;
-            }
-            else if (this.valueIn === 'Tablespoon US' && this.valueOut === ' Kilometer(km3)') {
-                return parseFloat(this.inputNum) * 0.0000000000000147868;
-                }
-            else if (this.valueIn === 'Tablespoon US' && this.valueOut === 'Mililiter(ml)') {
-                return parseFloat(this.inputNum) * 14786.764781;
-            }
-            else if (this.valueIn === 'Tablespoon US' && this.valueOut === 'Liter(l)') {
-                return parseFloat(this.inputNum) * 0.0147867648;
-            }
-            else if (this.valueIn === 'Tablespoon US' && this.valueOut === 'Deciliter(dl)') {
-                return parseFloat(this.inputNum) * 0.1478676478;
-            }
-            else if (this.valueIn === 'Tablespoon US' && this.valueOut === 'Cup US') {
-                return parseFloat(this.inputNum) * 0.0625;
-            }
-            else if (this.valueIn === 'Tablespoon US' && this.valueOut === 'Gallon US (gal)') {
-                return parseFloat(this.inputNum) * 0.00390625;
-            }
-            else if (this.valueIn === 'Tablespoon US' && this.valueOut === 'Teaspoon US') {
-                return parseFloat(this.inputNum) * 3;
-            }
+      else if (this.valueIn === 'Tablespoon US' && this.valueOut === ' Milimeter(mm)') {
+        if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(14786.764781, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 14786.764781;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(14786.764781, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 14786.764781;
+        }
+      }
+      else if (this.valueIn === 'Tablespoon US' && this.valueOut === ' Centimeter(cm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(14.786764781, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 14.786764781;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(14.786764781, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 14.786764781;
+        }
+      }
+      else if (this.valueIn === 'Tablespoon US' && this.valueOut === ' Decimeter(dm)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow( 0.0147867648, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) *  0.0147867648;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow( 0.0147867648, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) *  0.0147867648;
+        }
+      }
+      else if (this.valueIn === 'Tablespoon US' && this.valueOut === ' Meter(m)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0000147868, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0000147868;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0000147868, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0000147868;
+        }
+      }
+      else if (this.valueIn === 'Tablespoon US' && this.valueOut === ' Kilometer(km)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0000000000000147868, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0000000000000147868;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0000000000000147868, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0000000000000147868;
+        }
+          }
+      else if (this.valueIn === 'Tablespoon US' && this.valueOut === 'Mililiter(ml)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(14786.764781, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 14786.764781;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(14786.764781, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 14786.764781;
+        }
+      }
+      else if (this.valueIn === 'Tablespoon US' && this.valueOut === 'Liter(l)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0147867648, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0147867648;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0147867648, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0147867648;
+        }
+      }
+      else if (this.valueIn === 'Tablespoon US' && this.valueOut === 'Deciliter(dl)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.1478676478, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.1478676478;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.1478676478, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.1478676478;
+        }
+      }
+      else if (this.valueIn === 'Tablespoon US' && this.valueOut === 'Cup US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.0625, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0625;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.0625, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.0625;
+        }
+      }
+      else if (this.valueIn === 'Tablespoon US' && this.valueOut === 'Gallon US (gal)') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(0.00390625, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.00390625;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(0.00390625, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 0.00390625;
+        }
+      }
+      else if (this.valueIn === 'Tablespoon US' && this.valueOut === 'Teaspoon US') {
+          if (this.unitPow != '' && this.userPow != '') {
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * Math.pow(3, this.unitPow) ;
+        }
+        else if (this.userPow != ''){
+          return parseFloat(Math.pow(this.inputNum, this.userPow)) * 3;
+        }
+        else if (this.unitPow != ''){
+          return parseFloat(this.inputNum) * Math.pow(3, this.unitPow) ;
+        } else {
+          return parseFloat(this.inputNum) * 3;
+        }
+      }
 
       else {
         return ''
