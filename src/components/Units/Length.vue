@@ -1,5 +1,5 @@
 <template>
-  <v-card flat>
+  <v-card class="px-5" flat>
     <v-container class="container" fluid>
       <h1 class="text-center pt-7">Length</h1>
       <v-row class="row d-flex justify-center py-7" cols="2">
@@ -64,7 +64,7 @@
         </v-col>
       </v-row>
       </v-container>
-    <v-container class="mx-10" fluid>
+    <v-container class="" fluid>
       <v-row justify="center">
         <v-col  xl="4" lg="4" sm="4">
           <v-switch

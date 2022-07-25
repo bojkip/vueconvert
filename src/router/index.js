@@ -5,6 +5,8 @@ import AllCategoriesList from '@/components/AllCategories/AllCategoriesList.vue'
 import Temperature from '@/components/Units/Temperature.vue';
 import Volume from '@/components/Units/Volume.vue';
 import Area from '@/components/Units/Area.vue';
+import Energy from '@/components/Units/Energy.vue';
+
 
 Vue.use(VueRouter);
 
@@ -41,6 +43,11 @@ const routes = [
     path: '/area',
     name: 'area',
     component: Area,
+  },
+  {
+    path: '/energy',
+    name: 'energy',
+    component: Energy,
   },
 ];
 
