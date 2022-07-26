@@ -6,6 +6,7 @@ import Temperature from '@/components/Units/Temperature.vue';
 import Volume from '@/components/Units/Volume.vue';
 import Area from '@/components/Units/Area.vue';
 import Energy from '@/components/Units/Energy.vue';
+import Navbar from  '@/components/Nav.vue';
 
 
 Vue.use(VueRouter);
@@ -48,6 +49,11 @@ const routes = [
     path: '/energy',
     name: 'energy',
     component: Energy,
+  },
+  {
+    path: '/nav',
+    name: 'nav',
+    component: Navbar,
   },
 ];
 

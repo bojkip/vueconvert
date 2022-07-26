@@ -1,5 +1,5 @@
 <template>
-  <v-card class="px-5" flat>
+  <v-card  class="px-5" flat>
     <v-container class="container" fluid>
       <h1 class="text-center pt-7">Length</h1>
       <v-row class="row d-flex justify-center py-7" cols="2">
@@ -89,6 +89,7 @@
     <add-components-btn class="mt-5"></add-components-btn>
   </v-card>
 </template>
+
 
 
 

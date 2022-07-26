@@ -1,25 +1,11 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      flat
-      color="white"
-      
-      
-    >
-      <div class="mt-4 mx-2">
-        <v-icon>mdi-sync</v-icon>
-      </div>
-      <div>
-        <v-toolbar-title class="font-weight-bold mt-4">CONVERT</v-toolbar-title>
-      </div>
-      
-      <search-bar></search-bar>
-      
-
-      <all-categories-btn></all-categories-btn>
-    
-    </v-app-bar>
+  <v-app
+  app 
+  flat >
+  
+    <nav>
+      <nav-bar></nav-bar>
+    </nav>
 
     <v-main>
       <router-view/>
@@ -30,11 +16,13 @@
 <script>
 import SearchBar from './components/SearchBar.vue';
 import AllCategoriesBtn from './components/AllCategories/AllCategoriesBtn.vue';
+import NavBar from './components/Nav.vue';
 
 export default {
   components: {
     SearchBar,
-    AllCategoriesBtn
+    AllCategoriesBtn,
+    NavBar,
   },
   name: 'App',
 

@@ -11,13 +11,13 @@
                         placeholder="Volume or Temperature"
                         class="pt-5"
                     ></v-autocomplete>
-                    <div class="pa-5">
-                        <v-btn  @click="searchBtn">
+        </v-toolbar>
+        <div class="px-14 pt-4 pb-7">
+                        <v-btn small elevation="0"  rounded @click="searchBtn">
                             <v-icon left>mdi-magnify</v-icon>
                             <span>Search</span>
                         </v-btn>
                     </div>
-        </v-toolbar>
     </v-card>
 </template>
 
