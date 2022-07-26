@@ -20,10 +20,10 @@ flat
         <v-toolbar-title class="font-weight-bold mt-4">CONVERT</v-toolbar-title>
         </div>
         
-        <search-bar></search-bar>
+        <search-bar class="d-none d-xxl-flex d-lg-flex"></search-bar>
         
 
-        <all-categories-btn></all-categories-btn>
+        <all-categories-btn class="d-none d-xxl-flex d-lg-flex"></all-categories-btn>
 </v-app-bar>
 
 <v-navigation-drawer

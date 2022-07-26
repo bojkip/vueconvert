@@ -3,7 +3,7 @@
     <v-container class="container" fluid>
     <h1 class="text-center pt-7">Temperature</h1>
     <v-row class="row d-flex justify-center py-7" cols="2">
-        <v-col cols="3">
+        <v-col xl="5" lg="5" sm="6">
         <v-text-field class="text-center result-field"  :messages="`${valueOut}`"  v-model="resultOutput" :vlaue="setResult" label="Result "></v-text-field>
         <!-- {{probaV}} {{inputNum}} -->
         <v-tooltip bottom> 
