@@ -64,7 +64,6 @@
         </v-col>
     </v-row>
     </v-container>
-    <add-components-btn class="mt-5"></add-components-btn>
 </v-card>
 </template>
 

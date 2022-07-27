@@ -1,58 +1,78 @@
 <template>
-    <v-card class="pa-5" flat>
-        <v-container fluid v-for="item in items" :key="item.name">
-            <v-row>
-                <h1>Search Bar</h1>
-            </v-row>
-            <v-row
-                align="center">
-                <v-col cols="12">
-                <v-autocomplete
-                    v-model="value"
-                    :items="item.name"
-                    dense
-                    filled
-                    label="Filled"
-                ></v-autocomplete>
-                </v-col>
-            </v-row>
-            <v-row>
-                <v-btn @click="btnStore" >Search</v-btn>
-                <p>{{value}} - {{inputName}}</p>
-                <hello-world v-if="item.name === item.value"></hello-world>
-            </v-row>
-        </v-container>
+    <v-card flat width="100em">
+        <v-toolbar v-if="searchBarShow" class="white--text pt-1" flat>
+            <v-toolbar-title>Search</v-toolbar-title>
+                    <v-autocomplete
+                        v-model="value"
+                        :items="items"
+                        dense
+                        autofocus
+                        
+                        label="Search"
+                        placeholder="Volume or Temperature"
+                        class="pt-5"
+                    ></v-autocomplete>
+                    <div class="pa-5">
+                        <v-btn @click="searchBtn">
+                            <v-icon left>mdi-magnify</v-icon>
+                            <span>Search</span>
+                        </v-btn>
+                    </div>
+        </v-toolbar>
+        <v-card flat v-if="this.storedValue === 'Energy'">
+            <energy></energy>
+            <add-components-btn></add-components-btn>
+        </v-card>
+        <v-card flat v-if="this.storedValue === 'Length'">
+            <length></length>
+            <add-components-btn></add-components-btn>
+        </v-card>
+        <v-card flat v-if="this.storedValue === 'Temperature'">
+            <temperature></temperature>
+            <add-components-btn></add-components-btn>
+        </v-card>
     </v-card>
 </template>
 
 <script>
-import HelloWorld from '../Units/Length.vue'
+import Energy from '../Units/Energy.vue';
+import Length from '../Units/Length.vue';
+import Temperature from '../Units/Temperature.vue';
+import AddComponentsBtn from './AddComponentsBtn.vue';
 
     export default {
-    components: {
-        HelloWorld,
-    },
-    methods: {
-        btnStore(){
-            return this.inputName = this.value;
-        }
-    },
-    computed: {
-        inputs(){
-            if (this.imputName) {
-                this.filter(m => m.gender === this.genderQuery)
-            }
-        }
-    },
+        components:{
+            Energy,
+            Length,
+            Temperature,
+            AddComponentsBtn,
+        },
     data: () => ({
         items: [
-            {
-            name: 'Length',
-            }
+            'Energy', 'Length', 'Temperature',
         ],
-        values: ['foo', 'bar'],
-        value: null,
-        inputName: '',
+        value: '',
+        storedValue: '',
+        searchBarShow: true,
     }),
+    methods: {
+        searchBtn(){
+            if(this.value === 'Energy'){
+                this.storedValue = this.value;
+                this.searchBarShow = false;
+            }
+            else if(this.value === 'Length'){
+                this.storedValue = this.value;
+                this.searchBarShow = false;
+            }
+            else if(this.value === 'Temperature'){
+                this.storedValue = this.value;
+                this.searchBarShow = false;
+            }
+            else{
+                this.storedvalue = '';
+            }
+        },
+    },
     }
 </script>

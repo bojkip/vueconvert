@@ -9,6 +9,7 @@
 
     <v-main>
       <router-view/>
+      <add-components-btn></add-components-btn>
     </v-main>
   </v-app>
 </template>
@@ -17,12 +18,14 @@
 import SearchBar from './components/SearchBar.vue';
 import AllCategoriesBtn from './components/AllCategories/AllCategoriesBtn.vue';
 import NavBar from './components/Nav.vue';
+import AddComponentsBtn from './components/AddComponents/AddComponentsBtn.vue';
 
 export default {
   components: {
     SearchBar,
     AllCategoriesBtn,
     NavBar,
+    AddComponentsBtn,
   },
   name: 'App',
 
