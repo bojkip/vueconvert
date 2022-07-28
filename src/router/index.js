@@ -7,6 +7,7 @@ import Volume from '@/components/Units/Volume.vue';
 import Area from '@/components/Units/Area.vue';
 import Energy from '@/components/Units/Energy.vue';
 import Navbar from  '@/components/Nav.vue';
+import Time from '@/components/Units/Time.vue';
 
 
 Vue.use(VueRouter);
@@ -54,6 +55,11 @@ const routes = [
     path: '/nav',
     name: 'nav',
     component: Navbar,
+  },
+  {
+    path: '/time',
+    name: 'time',
+    component: Time,
   },
 ];
 

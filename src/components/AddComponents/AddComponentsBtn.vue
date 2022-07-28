@@ -1,44 +1,36 @@
 <template>
-    <v-container>
-        <v-row>
-            <v-col class="d-flex justify-center">
-                <v-btn rounded @click="showBtn">{{btnTxt}}</v-btn>
-            </v-col>
-        </v-row>
-        <v-row>
-            <v-col>
-                <add-search-bar v-if="showSerch"></add-search-bar>
-            </v-col>
-        </v-row>
-    </v-container>
+    <v-card>
+        <v-container class="d-flex justify-end">
+            <v-btn icon @click="addComponentBtn">
+                <v-icon>mdi-plus-thick</v-icon>
+            </v-btn>
+        </v-container>
+        <v-container>
+            <add-search-bar v-if="addComponent"></add-search-bar>
+        </v-container>
+    </v-card>
 </template>
 
 <script>
 import AddSearchBar from './AddSearchBar.vue';
 
-export default {
+export default{
     components:{
         AddSearchBar,
     },
     data(){
-        return {
-            showSerch: false,
-            btnTxt: 'Add Another Component',
-        }
+        return{
+        removeComponent: true,
+        addComponent: false,
+        };
     },
     methods: {
-        showBtn() {
-            this.showSerch = !this.showSerch;
-            if (this.showSerch === false){
-                this.btnTxt = 'Add Another Component';
-            }
-            else{
-                this.btnTxt = 'Remove Component';
-            }
-        }
+        removeComponentBtn(){
+            this.removeComponent = false;
+        },
+        addComponentBtn(){
+            this.addComponent = !this.addComponent;
+        },
     },
-    computed:{
-        
-    }
 }
 </script>

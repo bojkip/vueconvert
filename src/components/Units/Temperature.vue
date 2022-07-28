@@ -1,6 +1,13 @@
 <template>
 <v-card class="px-5" flat>
-    <v-container class="container" fluid>
+    <v-container class="d-flex justify-end">
+        <v-btn icon @click="addComponentBtn">
+            <v-icon>mdi-plus-thick</v-icon>
+        </v-btn>
+    </v-container>
+    <v-container>
+    </v-container>
+    <v-container class="container" v-if="removeComponent" fluid>
     <h1 class="text-center pt-7">Temperature</h1>
     <v-row class="row d-flex justify-center py-7" cols="2">
         <v-col xl="5" lg="5" sm="6">
@@ -63,6 +70,8 @@
         ></v-autocomplete>
         </v-col>
     </v-row>
+    <add-search-bar></add-search-bar>
+    <search-bar v-if="addComponent"></search-bar>
     </v-container>
 </v-card>
 </template>
@@ -72,10 +81,12 @@
 
 <script>
 import AddComponentsBtn from '../AddComponents/AddComponentsBtn.vue';
+import SearchBar from '../SearchBar.vue';
 
 export default {
     components: {
     AddComponentsBtn,
+    SearchBar,
     },
     data() {
         return {
@@ -91,10 +102,18 @@ export default {
         result: '',
         resultOutput: '',
         userPow: '',
+        removeComponent: true,
+        addComponent: false,
         
         }
     },
     methods: {
+        removeComponentBtn(){
+            this.removeComponent = false;
+        },
+        addComponentBtn(){
+            this.addComponent = !this.addComponent;
+        },
         resetInput(){
         this.inputNum = '' ;
         this.itemIn = '',

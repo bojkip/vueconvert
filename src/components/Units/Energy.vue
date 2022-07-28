@@ -1,6 +1,14 @@
 <template>
-<v-card class="px-5" flat>
-    <v-container class="container" fluid>
+<v-card class="px-5" flat >
+    <v-container class="d-flex justify-end">
+        <v-btn icon @click="addComponentBtn">
+            <v-icon>mdi-plus-thick</v-icon>
+        </v-btn>
+    </v-container>
+    <v-container>
+        <add-search-bar v-if="addComponent"></add-search-bar>
+    </v-container>
+    <v-container class="container" fluid v-if="removeComponent">
     <h1 class="text-center pt-7">Energy</h1>
     <v-row class="row d-flex justify-center py-7" cols="2">
         <v-col xl="5" lg="5" sm="6" >
@@ -71,10 +79,12 @@
 
 <script>
 import AddComponentsBtn from '../AddComponents/AddComponentsBtn.vue';
+import AddSearchBar from '../AddComponents/AddSearchBar.vue';
 
 export default {
     components: {
     AddComponentsBtn,
+    AddSearchBar,
     },
     data() {
         return {
@@ -89,10 +99,18 @@ export default {
         show: false,
         result: '',
         resultOutput: '',
+        removeComponent: true,
+        addComponent: true,
         
         }
     },
     methods: {
+        removeComponentBtn(){
+            this.removeComponent = false;
+        },
+        addComponentBtn(){
+            this.addComponent = !this.addComponent;
+        },
         resetInput(){
         this.inputNum = '' ;
         this.itemIn = '',
@@ -102,6 +120,7 @@ export default {
         this.valueOut = '' ;
         this.valueIn = '' ;
         this.resultOutput = '' ;
+        this.userPow = '';
         },
         copyBtn(){
         navigator.clipboard.writeText(this.resultOutput);

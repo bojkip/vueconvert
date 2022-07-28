@@ -25,11 +25,9 @@
         </v-card>
         <v-card flat v-if="this.storedValue === 'Length'">
             <length></length>
-            <add-components-btn></add-components-btn>
         </v-card>
         <v-card flat v-if="this.storedValue === 'Temperature'">
             <temperature></temperature>
-            <add-components-btn></add-components-btn>
         </v-card>
     </v-card>
 </template>

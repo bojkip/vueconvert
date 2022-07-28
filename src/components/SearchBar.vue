@@ -25,7 +25,7 @@
     export default {
     data: () => ({
         items: [
-            'Energy', 'Length', 'Temperature',
+            'Energy', 'Length', 'Temperature', 'Time',
         ],
         value: '',
     }),
@@ -39,6 +39,9 @@
             }
             else if(this.value === 'Temperature'){
                 return this.$router.push('/temperature');
+            }
+            else if(this.value === 'Time'){
+                return this.$router.push('/time');
             }
         },
     }

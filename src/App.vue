@@ -9,7 +9,6 @@
 
     <v-main>
       <router-view/>
-      <add-components-btn></add-components-btn>
     </v-main>
   </v-app>
 </template>
