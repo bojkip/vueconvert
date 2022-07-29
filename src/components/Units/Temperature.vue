@@ -70,8 +70,7 @@
         ></v-autocomplete>
         </v-col>
     </v-row>
-    <add-search-bar></add-search-bar>
-    <search-bar v-if="addComponent"></search-bar>
+    <search-component v-if="addComponent"></search-component>
     </v-container>
 </v-card>
 </template>
@@ -82,11 +81,13 @@
 <script>
 import AddComponentsBtn from '../AddComponents/AddComponentsBtn.vue';
 import SearchBar from '../SearchBar.vue';
+import SearchComponent from '../SearchComponent.vue';
 
 export default {
     components: {
     AddComponentsBtn,
     SearchBar,
+    SearchComponent,
     },
     data() {
         return {
