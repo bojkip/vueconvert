@@ -9,7 +9,7 @@
         
     >
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum"></v-text-field>
+        <v-text-field outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum" :value="convertTemp"></v-text-field>
         </v-col>
         <v-col
         xl="4" lg="4" sm="4"
@@ -63,14 +63,7 @@
 
 
 <script>
-import AddComponentsBtn from '../AddComponents/AddComponentsBtn.vue';
-import AddSearchBar from '../AddComponents/AddSearchBar.vue';
-
 export default {
-    components: {
-    AddComponentsBtn,
-    AddSearchBar,
-    },
     data() {
         return {
         inputNum: '' ,
@@ -86,7 +79,6 @@ export default {
         resultOutput: '',
         removeComponent: true,
         addComponent: true,
-        resultOutput1: '',
         jouleResult: '',
         kilojuleResult: '',
         kilowattHourResult: '',
@@ -112,18 +104,18 @@ export default {
         this.resultOutput = '' ;
         this.userPow = '';
         },
-        copyBtn(){
-        navigator.clipboard.writeText(this.resultOutput);
-        },
         showF() {
         this.show = !this.show;
-        }
+        },
     },
     computed: {
-        setResult(){
-            this.kilowattHourResult = this.convertTemp;
-
-
+        removeInputNum(){
+            if(this.inputNum === ''){
+                this.jouleResult = '0';
+                this.kilojuleResult = '0';
+                this.kilowattHourResult = '0';
+                this.wattHourResult = '0';
+                }
             },
         exponent(){
             if (this.inputPow > 0) {
@@ -134,7 +126,13 @@ export default {
             }
         },
         convertTemp(){
-            if (this.valueIn === 'Joule(J)') {
+            if(this.inputNum === ''){
+                this.kilojuleResult = '' ;
+                this.kilowattHourResult = '' ;
+                this.wattHourResult = '' ;
+                this.jouleResult = '' ;
+            }
+            else if (this.valueIn === 'Joule(J)') {
                 if (this.userPow != ''){
                    this.kilojuleResult =  parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.001;
                     this.kilowattHourResult = parseFloat(Math.pow(this.inputNum, this.userPow)) / 3600000;
@@ -189,12 +187,17 @@ export default {
                 else {
                     this.kilojuleResult =  parseFloat(this.inputNum) * 3.6;
                     this.kilowattHourResult = parseFloat(this.inputNum) * 0.001;
-                    this.wattHourResult = parseFloat(this.inputNum);
+                    this.kilojuleResult = parseFloat(this.inputNum);
                     this.jouleResult = parseFloat(this.inputNum) * 3600;
                 }
             }
+            
+
             else{
-                return '';
+                this.kilojuleResult = '' ;
+                this.kilowattHourResult = '' ;
+                this.wattHourResult = '' ;
+                this.jouleResult = '' ;
             }
         }
 
