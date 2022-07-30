@@ -9,7 +9,7 @@
         
     >
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum" :value="convertTemp"></v-text-field>
+        <v-text-field autofocus outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum" :value="convertTemp"></v-text-field>
         </v-col>
         <v-col
         xl="4" lg="4" sm="4"
@@ -38,21 +38,21 @@
         
     >
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined :messages="`${valueOut} ${exponent}`"  v-model="jouleResult" :value="convertTemp" label="Joule(J) "></v-text-field>
+        <v-text-field outlined v-model="jouleResult" :value="convertTemp" label="Joule(J) "></v-text-field>
         </v-col>
         <v-col
         xl="4" lg="4" sm="4"
         >
-        <v-text-field outlined :messages="`${valueOut} ${exponent}`"  v-model="kilojuleResult" :value="convertTemp" label="Kilojule(kJ) "></v-text-field>
+        <v-text-field outlined v-model="kilojuleResult" :value="convertTemp" label="Kilojule(kJ) "></v-text-field>
         </v-col>
         </v-row>
         <v-row justify="center">
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined :messages="`${valueOut} ${exponent}`"  v-model="kilowattHourResult" :value="convertTemp"
+        <v-text-field outlined v-model="kilowattHourResult" :value="convertTemp"
         label="Kilowatt-hour(kWh) "></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined :messages="`${valueOut} ${exponent}`"  v-model="wattHourResult" :value="convertTemp" label="Watt-hour(Wh)"></v-text-field>
+        <v-text-field outlined v-model="wattHourResult" :value="convertTemp" label="Watt-hour(Wh)"></v-text-field>
         </v-col>
     </v-row>
     </v-container>
@@ -68,63 +68,17 @@ export default {
         return {
         inputNum: '' ,
         itemsIn: [ 'Joule(J)', 'Kilojule(kJ)', 'Kilowatt-hour(kWh)', 'Watt-hour(Wh)'],
-        valuesIn: ['foo', 'bar'],
         valueIn: '',
-        itemsOut: ['Joule(J)', 'Kilojule(kJ)', 'Kilowatt-hour(kWh)', 'Watt-hour(Wh)'],
-        valuesOut: ['foo', 'bar'],
-        valueOut: '',
         userPow: '',
-        show: false,
-        result: '',
-        resultOutput: '',
         removeComponent: true,
         addComponent: true,
         jouleResult: '',
         kilojuleResult: '',
         kilowattHourResult: '',
         wattHourResult: '',
-        
         }
     },
-    methods: {
-        removeComponentBtn(){
-            this.removeComponent = false;
-        },
-        addComponentBtn(){
-            this.addComponent = !this.addComponent;
-        },
-        resetInput(){
-        this.inputNum = '' ;
-        this.itemIn = '',
-        this.itemOut = '' ;
-        this.inputPow = '' ;
-        this.probaN = '' ;
-        this.valueOut = '' ;
-        this.valueIn = '' ;
-        this.resultOutput = '' ;
-        this.userPow = '';
-        },
-        showF() {
-        this.show = !this.show;
-        },
-    },
     computed: {
-        removeInputNum(){
-            if(this.inputNum === ''){
-                this.jouleResult = '0';
-                this.kilojuleResult = '0';
-                this.kilowattHourResult = '0';
-                this.wattHourResult = '0';
-                }
-            },
-        exponent(){
-            if (this.inputPow > 0) {
-                return 'expo:' + ' ' + this.inputPow;
-            }
-            else {
-                return '';
-            }
-        },
         convertTemp(){
             if(this.inputNum === ''){
                 this.kilojuleResult = '' ;
@@ -187,11 +141,10 @@ export default {
                 else {
                     this.kilojuleResult =  parseFloat(this.inputNum) * 3.6;
                     this.kilowattHourResult = parseFloat(this.inputNum) * 0.001;
-                    this.kilojuleResult = parseFloat(this.inputNum);
+                    this.wattHourResult = parseFloat(this.inputNum);
                     this.jouleResult = parseFloat(this.inputNum) * 3600;
                 }
             }
-            
 
             else{
                 this.kilojuleResult = '' ;
@@ -205,5 +158,13 @@ export default {
 }
 
 </script>
+
+<style scoped>
+    @import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+    
+    h1, .v-text-field, .v-autocomplete{
+        font-family: 'Uchen', serif;
+    }
+</style>
 
 
