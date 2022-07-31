@@ -8,12 +8,12 @@
         class="pt-10"
     >
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field autofocus outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum" :value="convertTime"></v-text-field>
+        <v-text-field color="#008585" autofocus outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum" :value="convertTime"></v-text-field>
         </v-col>
         <v-col
         xl="4" lg="4" sm="4"
         >
-        <v-text-field outlined label="Your Exponent" placeholder="2" hint="If your number has no exponent, skip this field" v-model="userPow">
+        <v-text-field color="#008585" outlined label="Your Exponent" placeholder="2" hint="If your number has no exponent, skip this field" v-model="userPow">
         </v-text-field>
         </v-col>
         </v-row>
@@ -22,7 +22,7 @@
             <v-autocomplete
                 v-model="valueIn"
                 :items="itemsIn"
-                
+                color="#008585"
                 filled
                 label="Your Unit"
                 placeholder="Minute(min)"
@@ -36,38 +36,38 @@
         justify="center"
     >
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined v-model="microsecondResult" :value="convertTime" label="Microsecond(μs) "></v-text-field>
+        <v-text-field color="#008585" outlined v-model="microsecondResult" :value="convertTime" label="Microsecond(μs) "></v-text-field>
         </v-col>
         <v-col
         xl="4" lg="4" sm="4"
         >
-        <v-text-field outlined v-model="millisecondResult" :value="convertTime" label="Millisecond(ms)"></v-text-field>
+        <v-text-field outlined color="#008585" v-model="millisecondResult" :value="convertTime" label="Millisecond(ms)"></v-text-field>
         </v-col>
         </v-row>
         <v-row justify="center">
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined v-model="secondResult" :value="convertTime"
+        <v-text-field outlined color="#008585" v-model="secondResult" :value="convertTime"
         label="Second(s)"></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined v-model="mimuteResult" :value="convertTime" label="Mimute(min)"></v-text-field>
+        <v-text-field outlined color="#008585" v-model="mimuteResult" :value="convertTime" label="Mimute(min)"></v-text-field>
         </v-col>
     </v-row>
     <v-row justify="center">
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined v-model="hourdResult" :value="convertTime"
+        <v-text-field outlined color="#008585" v-model="hourdResult" :value="convertTime"
         label="Hour(h)"></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined v-model="dayResult" :value="convertTime" label="Day"></v-text-field>
+        <v-text-field outlined color="#008585" v-model="dayResult" :value="convertTime" label="Day"></v-text-field>
         </v-col>
     </v-row>
     <v-row justify="center">
         <v-col xl="4" lg="4" sm="4" class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" >
-        <v-text-field outlined v-model="weekResult" :value="convertTime" label="Week"></v-text-field>
+        <v-text-field outlined color="#008585" v-model="weekResult" :value="convertTime" label="Week"></v-text-field>
         </v-col>
         <v-col cols="5" class="d-flex d-sm-none">
-        <v-text-field outlined v-model="weekResult" :value="convertTime" label="Week"></v-text-field>
+        <v-text-field outlined color="#008585" v-model="weekResult" :value="convertTime" label="Week"></v-text-field>
         </v-col>
     </v-row>
     </v-container>
@@ -98,7 +98,17 @@ export default {
     },
     computed: {
         convertTime(){
-            if (this.valueIn === 'Microsecond(μs)') {
+            if (this.inputNum === ''){
+                this.microsecondResult = '' ;
+                this.millisecondResult = '' ;
+                this.mimuteResult = '' ;
+                this.secondResult = '' ;
+                this.hourdResult = '';
+                this.dayResult = '';
+                this.weekResult = '';
+            }
+
+            else if (this.valueIn === 'Microsecond(μs)') {
                 if (this.userPow != ''){
                     this.microsecondResult = parseFloat(Math.pow(this.inputNum, this.userPow));
                     this.millisecondResult = parseFloat(Math.pow(this.inputNum, this.userPow)) / 1000000;
@@ -250,10 +260,13 @@ export default {
             }
 
             else{
-                this.kilojuleResult = '' ;
-                this.kilowattHourResult = '' ;
-                this.wattHourResult = '' ;
-                this.jouleResult = '' ;
+                this.microsecondResult = '' ;
+                this.millisecondResult = '' ;
+                this.mimuteResult = '' ;
+                this.secondResult = '' ;
+                this.hourdResult = '';
+                this.dayResult = '';
+                this.weekResult = '';
             }
         }
 

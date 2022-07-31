@@ -78,7 +78,13 @@ export default {
     },
     computed: {
         convertTemp(){
-            if (this.valueIn === 'Celsius(C)') {
+            if (this.inputNum === ''){
+                this.fahrenheitResult = '' ;
+                this.kelvinResult = '' ;
+                this.celsiusResult = '' ;
+            }
+
+            else if (this.valueIn === 'Celsius(C)') {
                 if (this.userPow != ''){
                     this.fahrenheitResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 33.8;
                     this.kelvinResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 274.15;
@@ -126,10 +132,9 @@ export default {
                 }
             }
             else{
-                this.kilojuleResult = '' ;
-                this.kilowattHourResult = '' ;
-                this.wattHourResult = '' ;
-                this.jouleResult = '' ;
+                this.fahrenheitResult = '' ;
+                this.kelvinResult = '' ;
+                this.celsiusResult = '' ;
             }
         }
     }
