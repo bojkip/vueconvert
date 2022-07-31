@@ -1,63 +1,60 @@
 <template>
-<v-card flat>
-    <v-container class="container" fluid>
-    <h1 class="text-center pt-7">Volume</h1>
-    <v-row class="row d-flex justify-center py-7" cols="2">
-        <v-col cols="3">
-        <v-text-field class="text-center result-field" clearable :messages="`${valueOut}`"  v-model="resultOutput" :vlaue="setResult" label="Result "></v-text-field>
-        <!-- {{probaV}} {{inputNum}} -->
-        <v-tooltip bottom> 
-            <template v-slot:activator="{ on, attrs }">
-            <v-btn icon @click="copyBtn" v-bind="attrs"
-        v-on="on">
-            <v-icon >mdi-clipboard-multiple-outline</v-icon>
-            </v-btn>
-            </template>
-            <span>Copy Result</span>
-        </v-tooltip>
-        <v-tooltip bottom>
-        <template v-slot:activator="{ on, attrs }">
-            <v-btn icon @click="resetInput" v-bind="attrs"
-            v-on="on">
-            <v-icon>mdi-close</v-icon>
-            </v-btn>
-        </template>
-        <span>Reset All</span>
-        </v-tooltip>
-
-        </v-col>
-    </v-row>
+<v-card class="px-5" flat >
+    <v-container class="container" fluid v-if="removeComponent">
+    <h1 class="text-center py-10">Volume</h1>
     <v-row
         align="center"
+        justify="center"
+        class="pt-10"
+        
     >
-        <v-col>
-        <v-text-field outlined clearable label="Your Number" hint="Number only" placeholder="e.g 120" v-model="inputNum"></v-text-field>
+        <v-col xl="4" lg="4" sm="4">
+        <v-text-field autofocus color="#008585" outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum" :value="convertVolume"></v-text-field>
         </v-col>
-        <v-col>
-        <v-autocomplete
-            v-model="valueIn"
-            :items="itemsIn"
-            dense
-            filled
-            label="From Unit"
-            placeholder="e.g. celsius or c"
-            clearable
-        ></v-autocomplete>
+        <v-col
+        xl="4" lg="4" sm="4"
+        >
+        <v-text-field outlined color="#008585" label="Your Exponent" placeholder="2" hint="If your number has no exponent, skip this field" v-model="userPow">
+        </v-text-field>
         </v-col>
-        <v-col>
-        <v-autocomplete
-            v-model="valueOut"
-            :items="itemsOut"
-            dense
-            filled
-            label="To Unit"
-            placeholder="e.g. fahrenheit or f"
-            clearable
-        ></v-autocomplete>
+        </v-row>
+        <v-row class="d-flex justify-center">
+            <v-col xl="5" lg="5" sm="5">
+            <v-autocomplete
+                v-model="valueIn"
+                :items="itemsIn"
+                color="#008585"
+                filled
+                label="Your Unit"
+                placeholder="Joule(J)"
+            ></v-autocomplete>
+            </v-col>
+    </v-row>
+    </v-container>
+    <v-container>
+            <v-row
+        align="center"
+        justify="center"
+    >
+        <v-col xl="4" lg="4" sm="4">
+        <v-text-field outlined color="#008585" v-model="jouleResult" :value="convertVolume" label="Joule(J) "></v-text-field>
+        </v-col>
+        <v-col
+        xl="4" lg="4" sm="4"
+        >
+        <v-text-field outlined color="#008585" v-model="kilojuleResult" :value="convertVolume" label="Kilojule(kJ) "></v-text-field>
+        </v-col>
+        </v-row>
+        <v-row justify="center">
+        <v-col xl="4" lg="4" sm="4">
+        <v-text-field outlined color="#008585" v-model="kilowattHourResult" :value="convertVolume"
+        label="Kilowatt-hour(kWh) "></v-text-field>
+        </v-col>
+        <v-col xl="4" lg="4" sm="4">
+        <v-text-field outlined color="#008585" v-model="wattHourResult" :value="convertVolume" label="Watt-hour(Wh)"></v-text-field>
         </v-col>
     </v-row>
     </v-container>
-    <add-components-btn class="mt-5"></add-components-btn>
 </v-card>
 </template>
 
@@ -74,38 +71,18 @@ export default {
     data() {
         return {
         inputNum: '' ,
-        itemsIn: [ 'Cubic Milimeter(mm3)', 'Cubic Centimeter(cm3)', 'Cubic Decimeter(dm3)', 'Cubic Meter(m3)', 'Cubic Kilometer(km3)', 'Mililiter(ml)', 'Liter(l)', 'Deciliter(dl)', 'Cup US', 'Gallon US (gal)', 'Teaspoon US', 'Tablespoon US'  ],
-        valuesIn: ['foo', 'bar'],
+        itemsIn: [ 'Cubic Milimeter(mm3)', 'Cubic Centimeter(cm3)', 'Cubic Decimeter(dm3)', 'Cubic Meter(m3)', 'Cubic Kilometer(km3)', 'Mililiter(ml)', 'Liter(l)', 'Deciliter(dl)', 'Cup US', 'Gallon US(gal)', 'Teaspoon US', 'Tablespoon US'  ],
         valueIn: '',
-        itemsOut:  [ 'Cubic Milimeter(mm3)', 'Cubic Centimeter(cm3)', 'Cubic Decimeter(dm3)', 'Cubic Meter(m3)', 'Cubic Kilometer(km3)', 'Mililiter(ml)', 'Liter(l)', 'Deciliter(dl)', 'Cup US', 'Gallon US (gal)', 'Teaspoon US', 'Tablespoon US'  ],
-        valuesOut: ['foo', 'bar'],
-        valueOut: '',
-        inputPow: '3',
-        show: false,
-        result: '',
-        resultOutput: '',
-        }
-    },
-    methods: {
-        resetInput(){
-        this.inputNum = '' ;
-        this.itemIn = '',
-        this.itemOut = '' ;
-        this.valueOut = '' ;
-        this.valueIn = '' ;
-        this.resultOutput = '' ;
-        },
-        copyBtn(){
-        navigator.clipboard.writeText(this.resultOutput);
-        },
-        showF() {
-        this.show = !this.show;
+        userPow: '',
+        removeComponent: true,
+        addComponent: true,
+        jouleResult: '',
+        kilojuleResult: '',
+        kilowattHourResult: '',
+        wattHourResult: '',
         }
     },
     computed: {
-        setResult(){
-            this.resultOutput = this.convertVolume;
-            },
         convertVolume(){
             if (this.valueIn === 'Cubic Milimeter(mm3)' && this.valueOut === 'Cubic Centimeter(cm3)') {
                 return parseFloat(this.inputNum) * 0.001;
