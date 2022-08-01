@@ -6,7 +6,7 @@
                         v-model="value"
                         :items="items"
                         dense
-                        
+                        color="#008585"
                         label="Search"
                         placeholder="Volume or Temperature"
                         class="pt-5"
@@ -25,7 +25,7 @@
     export default {
     data: () => ({
         items: [
-            'Energy', 'Length', 'Temperature', 'Time'
+            'Area', 'Energy', 'Length', 'Temperature', 'Time',
         ],
         value: '',
     }),
@@ -42,6 +42,9 @@
             }
             else if(this.value === 'Time'){
                 return this.$router.push('/time');
+            }
+            else if(this.value === 'Area'){
+                return this.$router.push('/area');
             }
         },
     }
