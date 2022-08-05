@@ -25,7 +25,7 @@
     export default {
     data: () => ({
         items: [
-            'Area', 'Energy', 'Length', 'Temperature', 'Time',
+            'Area', 'Energy', 'Length', 'Temperature', 'Time', 'Volume',
         ],
         value: '',
     }),
@@ -45,6 +45,9 @@
             }
             else if(this.value === 'Area'){
                 return this.$router.push('/area');
+            }
+            else if(this.value === 'Volume'){
+                return this.$router.push('/volume');
             }
         },
     }
