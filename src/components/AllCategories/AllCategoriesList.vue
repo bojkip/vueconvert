@@ -1,7 +1,7 @@
 <template>
 <v-container class="background">
     <v-row class="pt-15 d-flex d-flex d-sm-none" flat>
-    <v-expansion-panels>
+    <v-expansion-panels flat>
     <v-expansion-panel
     v-for="link in links"
     :key="link.name"
