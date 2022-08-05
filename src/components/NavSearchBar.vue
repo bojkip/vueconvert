@@ -35,7 +35,7 @@
                 return this.$router.push('/energy');
             }
             else if(this.value === 'Length'){
-                return this.$router.push('/');
+                return this.$router.push('/length');
             }
             else if(this.value === 'Temperature'){
                 return this.$router.push('/temperature');

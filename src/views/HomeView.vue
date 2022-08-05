@@ -1,20 +1,14 @@
 <template>
-  <div>
-    <!-- <search-bar></search-bar> -->
-    <length></length>
-  </div>
+    <div>
+        <all-categories-list></all-categories-list>
+    </div>
 </template>
 
 <script>
-import Length from '../components/Units/Length.vue';
-import SearchBar from '../components/SearchBar.vue';
-
+import AllCategoriesList from '@/components/AllCategories/AllCategoriesList.vue'
 export default {
-  name: 'Home',
-
-  components: {
-    Length,
-    SearchBar,
-  },
-};
+    components: {
+        AllCategoriesList,
+    }
+}
 </script>

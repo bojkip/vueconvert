@@ -21,9 +21,6 @@ flat
         </div>
         
         <search-bar class="d-none d-xxl-flex d-lg-flex"></search-bar>
-        
-
-        <all-categories-btn class="d-none d-xxl-flex d-lg-flex"></all-categories-btn>
 </v-app-bar>
 
 <v-navigation-drawer
@@ -44,7 +41,7 @@ flat
         <nav-search-bar></nav-search-bar>
 
         <v-list-item>
-            <v-list-item-title class="ps-10 primary--text"  @click="$router.push('/all-categories')">All Categories</v-list-item-title>
+            <v-list-item-title style="color: #008585;" class="ps-10"  @click="$router.push('/')">All Categories</v-list-item-title>
         </v-list-item>
         </v-list-item-group>
     </v-list>
