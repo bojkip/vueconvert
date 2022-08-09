@@ -53,3 +53,12 @@
     }
     }
 </script>
+
+<style scoped>
+    .v-btn:hover{
+        color: #008585;
+    }
+    .v-autocomplete, .v-toolbar{
+        color: #008585;
+    }
+</style>

@@ -12,7 +12,7 @@
                         class="pt-5"
                     ></v-autocomplete>
                     <div class="pa-5">
-                        <v-btn  @click="searchBtn">
+                        <v-btn flat elevation="1" rounded @click="searchBtn">
                             <v-icon left>mdi-magnify</v-icon>
                             <span>Search</span>
                         </v-btn>
@@ -56,3 +56,9 @@
     }
     }
 </script>
+
+<style scoped>
+    .v-btn:hover{
+        color: #008585;
+    }
+</style>

@@ -9,12 +9,12 @@
         
     >
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field autofocus color="#008585" outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum" :value="convertVolume"></v-text-field>
+        <v-text-field outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum" :value="convertVolume"></v-text-field>
         </v-col>
         <v-col
         xl="4" lg="4" sm="4"
         >
-        <v-text-field outlined color="#008585" label="Your Exponent" placeholder="2" hint="If your number has no exponent, skip this field" v-model="userPow">
+        <v-text-field outlined label="Your Exponent" placeholder="2" hint="If your number has no exponent, skip this field" v-model="userPow">
         </v-text-field>
         </v-col>
         </v-row>
@@ -23,7 +23,7 @@
             <v-autocomplete
                 v-model="valueIn"
                 :items="itemsIn"
-                color="#008585"
+            
                 filled
                 label="Your Unit"
                 placeholder="Joule(J)"
@@ -37,65 +37,65 @@
         justify="center"
     >
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="cubicMilimeterResult" :value="convertVolume" label="Cubic Milimeter(mm3) "></v-text-field>
+        <v-text-field outlined v-model="cubicMilimeterResult" :value="convertVolume" label="Cubic Milimeter(mm3) "></v-text-field>
         </v-col>
         <v-col
         xl="4" lg="4" sm="4"
         >
-        <v-text-field outlined color="#008585" v-model="cubicCentimeterResult" :value="convertVolume" label="Cubic Centimeter(cm3) "></v-text-field>
+        <v-text-field outlined v-model="cubicCentimeterResult" :value="convertVolume" label="Cubic Centimeter(cm3) "></v-text-field>
         </v-col>
         </v-row>
         <v-row justify="center">
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="cubicDecimeterResult" :value="convertVolume"
+        <v-text-field outlined v-model="cubicDecimeterResult" :value="convertVolume"
         label="Cubic Decimeter(dm3) "></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="cubicMeterResult" :value="convertVolume" label="Cubic Meter(m3)"></v-text-field>
+        <v-text-field outlined v-model="cubicMeterResult" :value="convertVolume" label="Cubic Meter(m3)"></v-text-field>
         </v-col>
     </v-row>
         <v-row justify="center">
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="cubicKilometerResult" :value="convertVolume"
+        <v-text-field outlined v-model="cubicKilometerResult" :value="convertVolume"
         label="Cubic Kilometer(km3) "></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="mililiterResult" :value="convertVolume" label="Mililiter(ml))"></v-text-field>
+        <v-text-field outlined v-model="mililiterResult" :value="convertVolume" label="Mililiter(ml))"></v-text-field>
         </v-col>
     </v-row>
         <v-row justify="center">
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="literResult" :value="convertVolume"
+        <v-text-field outlined v-model="literResult" :value="convertVolume"
         label="Liter(l) "></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="deciliterResult" :value="convertVolume" label="Deciliter(dl)"></v-text-field>
+        <v-text-field outlined v-model="deciliterResult" :value="convertVolume" label="Deciliter(dl)"></v-text-field>
         </v-col>
     </v-row>
     <v-row justify="center">
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="cubicMeterResult" :value="convertVolume"
+        <v-text-field outlined v-model="cubicMeterResult" :value="convertVolume"
         label="Cubic Meter(m3)"></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="cupUsResult" :value="convertVolume" label="Cup US"></v-text-field>
+        <v-text-field outlined v-model="cupUsResult" :value="convertVolume" label="Cup US"></v-text-field>
         </v-col>
     </v-row>
         <v-row justify="center">
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="gallonUsResult" :value="convertVolume"
+        <v-text-field outlined v-model="gallonUsResult" :value="convertVolume"
         label="Gallon US(gal) "></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="teaspoonResult" :value="convertVolume" label="Teaspoon US"></v-text-field>
+        <v-text-field outlined v-model="teaspoonResult" :value="convertVolume" label="Teaspoon US"></v-text-field>
         </v-col>
     </v-row>
     <v-row justify="center">
         <v-col xl="4" lg="4" sm="4" class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" >
-        <v-text-field outlined color="#008585" v-model="tablespoonResult" :value="convertTemp" label="Tablespoon US"></v-text-field>
+        <v-text-field outlined v-model="tablespoonResult" :value="convertTemp" label="Tablespoon US"></v-text-field>
         </v-col>
         <v-col cols="5" class="d-flex d-sm-none">
-        <v-text-field outlined color="#008585" v-model="tablespoonResult" :value="convertTemp" label="Tablespoon US"></v-text-field>
+        <v-text-field outlined v-model="tablespoonResult" :value="convertTemp" label="Tablespoon US"></v-text-field>
         </v-col>
     </v-row>
     </v-container>

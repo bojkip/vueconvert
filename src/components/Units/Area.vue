@@ -9,12 +9,12 @@
         
     >
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field autofocus color="#008585" outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum" :value="convertArea"></v-text-field>
+        <v-text-field outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum" :value="convertArea"></v-text-field>
         </v-col>
         <v-col
         xl="4" lg="4" sm="4"
         >
-        <v-text-field outlined color="#008585" label="Your Exponent" placeholder="2" hint="If your number has no exponent, skip this field" v-model="userPow">
+        <v-text-field outlined label="Your Exponent" placeholder="2" hint="If your number has no exponent, skip this field" v-model="userPow">
         </v-text-field>
         </v-col>
         </v-row>
@@ -23,7 +23,7 @@
             <v-autocomplete
                 v-model="valueIn"
                 :items="itemsIn"
-                color="#008585"
+            
                 filled
                 label="Your Unit"
                 placeholder="Joule(J)"
@@ -37,53 +37,53 @@
         justify="center"
     >
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="squareMilimeterResult" :value="convertArea" label="Square Milimeter(mm2)"></v-text-field>
+        <v-text-field outlined v-model="squareMilimeterResult" :value="convertArea" label="Square Milimeter(mm2)"></v-text-field>
         </v-col>
         <v-col
         xl="4" lg="4" sm="4"
         >
-        <v-text-field outlined color="#008585" v-model="squareCentimeterResult" :value="convertArea" label="Square Centimeter(cm2)"></v-text-field>
+        <v-text-field outlined v-model="squareCentimeterResult" :value="convertArea" label="Square Centimeter(cm2)"></v-text-field>
         </v-col>
         </v-row>
         <v-row justify="center">
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="squareDecimeterResult" :value="convertArea"
+        <v-text-field outlined v-model="squareDecimeterResult" :value="convertArea"
         label="Square Decimeter(dm2)"></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="squareMeterResult" :value="convertArea" label="Square Meter(m2)"></v-text-field>
+        <v-text-field outlined v-model="squareMeterResult" :value="convertArea" label="Square Meter(m2)"></v-text-field>
         </v-col>
     </v-row>
     <v-row justify="center">
     <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="hectareResult" :value="convertArea" label="Hectar(ha)"></v-text-field>
+        <v-text-field outlined v-model="hectareResult" :value="convertArea" label="Hectar(ha)"></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="squareKilometerResult" :value="convertArea" label="Square Kilometer(km2)"></v-text-field>
+        <v-text-field outlined v-model="squareKilometerResult" :value="convertArea" label="Square Kilometer(km2)"></v-text-field>
         </v-col>
     </v-row>
     <v-row justify="center">
     <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="acreResult" :value="convertArea" label="Acre"></v-text-field>
+        <v-text-field outlined v-model="acreResult" :value="convertArea" label="Acre"></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="areResult" :value="convertArea" label="Are"></v-text-field>
+        <v-text-field outlined v-model="areResult" :value="convertArea" label="Are"></v-text-field>
         </v-col>
     </v-row>
     <v-row justify="center">
     <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="squareInchResult" :value="convertArea" label="Squere Inch(in2)"></v-text-field>
+        <v-text-field outlined v-model="squareInchResult" :value="convertArea" label="Squere Inch(in2)"></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="squareFeetResult" :value="convertArea" label="Square Feet(ft2)"></v-text-field>
+        <v-text-field outlined v-model="squareFeetResult" :value="convertArea" label="Square Feet(ft2)"></v-text-field>
         </v-col>
     </v-row>
     <v-row justify="center">
     <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="squareYardResult" :value="convertArea" label="Square Yard(yd2)"></v-text-field>
+        <v-text-field outlined v-model="squareYardResult" :value="convertArea" label="Square Yard(yd2)"></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="squareMileResult" :value="convertArea" label="Square Mile(mi2)"></v-text-field>
+        <v-text-field outlined v-model="squareMileResult" :value="convertArea" label="Square Mile(mi2)"></v-text-field>
         </v-col>
     </v-row>
     </v-container>

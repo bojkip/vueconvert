@@ -9,12 +9,12 @@
         
     >
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field autofocus color="#008585" outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum" :value="convertEnergy"></v-text-field>
+        <v-text-field outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum" :value="convertEnergy"></v-text-field>
         </v-col>
         <v-col
         xl="4" lg="4" sm="4"
         >
-        <v-text-field outlined color="#008585" label="Your Exponent" placeholder="2" hint="If your number has no exponent, skip this field" v-model="userPow">
+        <v-text-field outlined label="Your Exponent" placeholder="2" hint="If your number has no exponent, skip this field" v-model="userPow">
         </v-text-field>
         </v-col>
         </v-row>
@@ -23,7 +23,7 @@
             <v-autocomplete
                 v-model="valueIn"
                 :items="itemsIn"
-                color="#008585"
+            
                 filled
                 label="Your Unit"
                 placeholder="Joule(J)"
@@ -37,21 +37,21 @@
         justify="center"
     >
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="jouleResult" :value="convertEnergy" label="Joule(J) "></v-text-field>
+        <v-text-field outlined v-model="jouleResult" :value="convertEnergy" label="Joule(J) "></v-text-field>
         </v-col>
         <v-col
         xl="4" lg="4" sm="4"
         >
-        <v-text-field outlined color="#008585" v-model="kilojuleResult" :value="convertEnergy" label="Kilojule(kJ) "></v-text-field>
+        <v-text-field outlined v-model="kilojuleResult" :value="convertEnergy" label="Kilojule(kJ) "></v-text-field>
         </v-col>
         </v-row>
         <v-row justify="center">
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="kilowattHourResult" :value="convertEnergy"
+        <v-text-field outlined v-model="kilowattHourResult" :value="convertEnergy"
         label="Kilowatt-hour(kWh) "></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined color="#008585" v-model="wattHourResult" :value="convertEnergy" label="Watt-hour(Wh)"></v-text-field>
+        <v-text-field outlined v-model="wattHourResult" :value="convertEnergy" label="Watt-hour(Wh)"></v-text-field>
         </v-col>
     </v-row>
     </v-container>

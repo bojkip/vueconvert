@@ -8,6 +8,7 @@ export default new Vuetify({
         themes: {
             light: {
             anchor: 'black', // defaults to 'primary', overrided to another color
+            primary: '#008585',
             },
         },
         },

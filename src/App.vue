@@ -9,6 +9,8 @@
     <v-main>
       <router-view/>
     </v-main>
+
+    <the-footer class="mt-10"></the-footer>
   </v-app>
 </template>
 
@@ -18,6 +20,7 @@ import AllCategoriesBtn from './components/AllCategories/AllCategoriesBtn.vue';
 import NavBar from './components/Nav.vue';
 import AddComponentsBtn from './components/AddComponents/AddComponentsBtn.vue';
 import SearchComponent from './components/SearchComponent.vue';
+import TheFooter from './components/TheFooter.vue';
 
 export default {
   components: {
@@ -26,6 +29,7 @@ export default {
     NavBar,
     AddComponentsBtn,
     SearchComponent,
+    TheFooter,
   },
   name: 'App',
 
