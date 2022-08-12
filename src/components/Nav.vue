@@ -13,11 +13,15 @@ flat
     <div class="mt-4 mx-2">
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
         </div>
-        
+        <a href="/">
+            <img class="mt-5 pr-5" src="../assets/i025.png" alt="">
+        </a>
         <div>
         <v-toolbar-title class="font-weight-bold mt-4" style="font-family: 'Uchen', serif;
     ">
-            UNIT <span style="color:#008585">YARD</span>
+            <a href="/">
+                UNIT <span style="color:#008585">YARD</span>
+            </a>
         </v-toolbar-title>
         </div>
         
@@ -37,7 +41,6 @@ flat
         <v-list-item-group
         v-model="group"
         link
-
         >
         <nav-search-bar></nav-search-bar>
 
@@ -68,4 +71,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    a{
+        text-decoration: none;
+    }
+</style>
 
