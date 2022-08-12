@@ -38,3 +38,11 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+    @import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+    
+    .v-application {
+        font-family: 'Uchen', serif;
+    }
+</style>

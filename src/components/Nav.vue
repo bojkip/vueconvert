@@ -13,11 +13,12 @@ flat
     <div class="mt-4 mx-2">
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
         </div>
-        <div class="mt-4 mx-2">
-        <v-icon>mdi-sync</v-icon>
-        </div>
+        
         <div>
-        <v-toolbar-title class="font-weight-bold mt-4">CONVERT</v-toolbar-title>
+        <v-toolbar-title class="font-weight-bold mt-4" style="font-family: 'Uchen', serif;
+    ">
+            UNIT <span style="color:#008585">YARD</span>
+        </v-toolbar-title>
         </div>
         
         <search-bar class="d-none d-xxl-flex d-lg-flex"></search-bar>

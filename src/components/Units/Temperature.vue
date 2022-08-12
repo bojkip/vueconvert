@@ -142,12 +142,4 @@ export default {
 
 </script>
 
-<style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
-    
-    h1, .v-text-field, .v-autocomplete{
-        font-family: 'Uchen', serif;
-    }
-</style>
-
 

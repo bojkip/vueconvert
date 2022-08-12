@@ -60,7 +60,7 @@
         label="Cubic Kilometer(km3) "></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined v-model="mililiterResult" :value="convertVolume" label="Mililiter(ml))"></v-text-field>
+        <v-text-field outlined v-model="mililiterResult" :value="convertVolume" label="Mililiter(ml)"></v-text-field>
         </v-col>
     </v-row>
         <v-row justify="center">
@@ -92,10 +92,10 @@
     </v-row>
     <v-row justify="center">
         <v-col xl="4" lg="4" sm="4" class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" >
-        <v-text-field outlined v-model="tablespoonResult" :value="convertTemp" label="Tablespoon US"></v-text-field>
+        <v-text-field outlined v-model="tablespoonResult" :value="convertVolume" label="Tablespoon US"></v-text-field>
         </v-col>
         <v-col cols="5" class="d-flex d-sm-none">
-        <v-text-field outlined v-model="tablespoonResult" :value="convertTemp" label="Tablespoon US"></v-text-field>
+        <v-text-field outlined v-model="tablespoonResult" :value="convertVolume" label="Tablespoon US"></v-text-field>
         </v-col>
     </v-row>
     </v-container>
@@ -514,10 +514,3 @@ export default {
 
 </script>
 
-<style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
-    
-    h1, .v-text-field, .v-autocomplete{
-        font-family: 'Uchen', serif;
-    }
-</style>

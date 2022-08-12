@@ -87,7 +87,6 @@
         </v-col>
     </v-row>
     </v-container>
-    <v-btn @click="top">Top</v-btn>
 </v-card>
 </template>
 
@@ -119,15 +118,6 @@ export default {
         squareMeterResult: '',
         }
     },
-    methods:{
-        top(){
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: 'smooth'
-                });
-            }
-        },
     computed: {
         convertArea(){
             if (this.inputNum === ''){
@@ -528,10 +518,3 @@ export default {
 }
 </script>
 
-<style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
-    
-    h1, .v-text-field, .v-autocomplete{
-        font-family: 'Uchen', serif;
-    }
-</style>
