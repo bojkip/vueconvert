@@ -45,7 +45,7 @@ flat
         <nav-search-bar></nav-search-bar>
 
         <v-list-item>
-            <v-list-item-title style="color: #008585;" class="ps-10"  @click="$router.push('/')">All Categories</v-list-item-title>
+            <v-list-item-title style="color: #008585;" class="ps-4"  @click="$router.push('/')">All Categories</v-list-item-title>
         </v-list-item>
         </v-list-item-group>
     </v-list>

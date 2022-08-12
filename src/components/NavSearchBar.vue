@@ -1,7 +1,6 @@
 <template>
     <v-card flat width="100em">
-        <v-toolbar class="white--text pt-1" flat>
-            <v-toolbar-title>Search</v-toolbar-title>
+        <v-toolbar class="white--text px-2 pt-1" flat>
                     <v-autocomplete
                         v-model="value"
                         :items="items"
@@ -12,7 +11,7 @@
                         class="pt-5"
                     ></v-autocomplete>
         </v-toolbar>
-        <div class="px-14 pt-4 pb-7">
+        <div class="px-4 pt-4 pb-7">
                         <v-btn small elevation="0"  rounded @click="searchBtn">
                             <v-icon left>mdi-magnify</v-icon>
                             <span>Search</span>
