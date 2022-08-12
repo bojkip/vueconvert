@@ -2,6 +2,7 @@
   <v-app
   app 
   flat >
+  
     <nav>
       <nav-bar></nav-bar>
     </nav>
