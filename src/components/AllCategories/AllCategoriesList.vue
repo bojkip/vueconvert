@@ -1,5 +1,5 @@
 <template>
-<v-container class="background">
+<v-container class="">
     <v-row class="pt-15 d-flex d-flex d-sm-none" flat>
     <v-expansion-panels flat>
     <v-expansion-panel
@@ -15,7 +15,9 @@
     </v-expansion-panel>
 </v-expansion-panels>
     </v-row>
-    <v-row class="pt-15 d-flex justify-center" flat>
+    </v-container>
+    <v-container class="pt-15 d-flex justify-center">
+    <v-row flat>
     <v-col
         v-for="link in links"
         :key="link.name"
@@ -49,6 +51,9 @@ export default{
                     name: 'Length', route: '/length',
                 },
                 {
+                    name: 'Mass', route: '/mass',
+                },
+                {
                     name: 'Temperature', route: '/temperature',
                 },
                 {
@@ -78,14 +83,4 @@ export default{
         font-family: 'Uchen', serif;
         font-size: 1.5em;
     }
-    /*
-    a{
-animation:blinking 1.2s infinite;
-}
-@keyframes blinking{
-0%{   color: black;   }
-30%{  color: #008585;   }
-}
-*/
-
 </style>

@@ -8,7 +8,7 @@
         class="pt-10"
     >
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum" :value="convertTime"></v-text-field>
+        <v-text-field outlined label="Your Number" hint="Number only" placeholder="120" v-model="inputNum" :value="convertLength"></v-text-field>
         </v-col>
         <v-col
         xl="4" lg="4" sm="4"

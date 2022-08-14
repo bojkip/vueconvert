@@ -64,10 +64,10 @@
     </v-row>
     <v-row justify="center">
     <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined v-model="acreResult" :value="convertArea" label="Acre"></v-text-field>
+        <v-text-field outlined v-model="acreResult" :value="convertArea" label="Acre(ac)"></v-text-field>
         </v-col>
         <v-col xl="4" lg="4" sm="4">
-        <v-text-field outlined v-model="areResult" :value="convertArea" label="Are"></v-text-field>
+        <v-text-field outlined v-model="areResult" :value="convertArea" label="Are(a)"></v-text-field>
         </v-col>
     </v-row>
     <v-row justify="center">
@@ -99,7 +99,7 @@ export default {
     data() {
         return {
         inputNum: '' ,
-        itemsIn: [ 'Square Milimeter(mm2)', 'Square Centimeter(cm2)', 'Square Decimeter(dm2)', 'Square Meter(m2)' ,'Hectar(ha)', 'Square Kilometer(km2)', 'Acre', 'Are', 'Squere Inch(in2)', 'Square Feet(ft2)', 'Square Yard(yd2)', 'Square Mile(mi2)' ],
+        itemsIn: [ 'Square Milimeter(mm2)', 'Square Centimeter(cm2)', 'Square Decimeter(dm2)', 'Square Meter(m2)' ,'Hectar(ha)', 'Square Kilometer(km2)', 'Acre(ac)', 'Are(a)', 'Squere Inch(in2)', 'Square Feet(ft2)', 'Square Yard(yd2)', 'Square Mile(mi2)' ],
         valueIn: '',
         userPow: '',
         removeComponent: true,
@@ -316,7 +316,7 @@ export default {
                 this.squareInchResult = parseFloat(this.inputNum) * 1550003100;
             }
         }
-        else if (this.valueIn === 'Acre') {
+        else if (this.valueIn === 'Acre(ac)') {
                 if (this.userPow != ''){
                 this.squareKilometerResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0040468564;
                 this.squareMeterResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 4046.8564224;
@@ -346,7 +346,7 @@ export default {
                 this.squareInchResult = parseFloat(this.inputNum) * 6272640;
             }
         }
-        else if (this.valueIn === 'Are') {
+        else if (this.valueIn === 'Are(a)') {
                 if (this.userPow != ''){
                 this.squareKilometerResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0001;
                 this.squareMeterResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 100;

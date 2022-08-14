@@ -9,6 +9,7 @@ import Area from '@/components/Units/Area.vue';
 import Energy from '@/components/Units/Energy.vue';
 import Navbar from  '@/components/Nav.vue';
 import Time from '@/components/Units/Time.vue';
+import Mass from '@/components/Units/Mass.vue';
 
 
 Vue.use(VueRouter);
@@ -61,6 +62,11 @@ const routes = [
     path: '/length',
     name: 'length',
     component: Length,
+  },
+  {
+    path: '/mass',
+    name: 'mass',
+    component: Mass,
   },
 ];
 
