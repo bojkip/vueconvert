@@ -10,6 +10,7 @@ import Energy from '@/components/Units/Energy.vue';
 import Navbar from  '@/components/Nav.vue';
 import Time from '@/components/Units/Time.vue';
 import Mass from '@/components/Units/Mass.vue';
+import Pressure from '@/components/Units/Pressure.vue';
 
 
 Vue.use(VueRouter);
@@ -67,6 +68,11 @@ const routes = [
     path: '/mass',
     name: 'mass',
     component: Mass,
+  },
+  {
+    path: '/pressure',
+    name: 'pressure',
+    component: Pressure,
   },
 ];
 

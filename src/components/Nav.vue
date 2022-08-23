@@ -11,7 +11,7 @@ flat
     style="background-color: white;"
 >
     <div class="mt-4 mx-2">
-        <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon class="d-flex d-xl-none d-lg-none" @click="drawer = true"></v-app-bar-nav-icon>
         </div>
         <a href="/">
             <img class="mt-5 pr-5" src="../assets/i025.png" alt="">
