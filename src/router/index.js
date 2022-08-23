@@ -2,12 +2,12 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import Length from '@/components/Units/Length.vue';
-import AllCategoriesList from '@/components/AllCategories/AllCategoriesList.vue';
+import AllCategoriesList from '@/components/AllCategoriesList.vue';
 import Temperature from '@/components/Units/Temperature.vue';
 import Volume from '@/components/Units/Volume.vue';
 import Area from '@/components/Units/Area.vue';
 import Energy from '@/components/Units/Energy.vue';
-import Navbar from  '@/components/Nav.vue';
+import Navbar from  '@/components/TheNav.vue';
 import Time from '@/components/Units/Time.vue';
 import Mass from '@/components/Units/Mass.vue';
 import Pressure from '@/components/Units/Pressure.vue';
@@ -19,15 +19,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView,
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
+    component: AllCategoriesList,
   },
   {
     path: '/temperature',

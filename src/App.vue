@@ -15,20 +15,12 @@
 </template>
 
 <script>
-import SearchBar from './components/SearchBar.vue';
-import AllCategoriesBtn from './components/AllCategories/AllCategoriesBtn.vue';
-import NavBar from './components/Nav.vue';
-import AddComponentsBtn from './components/AddComponents/AddComponentsBtn.vue';
-import SearchComponent from './components/SearchComponent.vue';
+import NavBar from './components/TheNav.vue';
 import TheFooter from './components/TheFooter.vue';
 
 export default {
   components: {
-    SearchBar,
-    AllCategoriesBtn,
     NavBar,
-    AddComponentsBtn,
-    SearchComponent,
     TheFooter,
   },
   name: 'App',

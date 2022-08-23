@@ -5,10 +5,9 @@
 </template>
 
 <script>
-import AllCategoriesList from '@/components/AllCategories/AllCategoriesList.vue'
+import AllCategoriesList from '@/components/AllCategoriesList.vue';
 export default {
-    components: {
-        AllCategoriesList,
-    }
+components:
+    AllCategoriesList,
 }
 </script>

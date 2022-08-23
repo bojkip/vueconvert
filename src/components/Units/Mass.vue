@@ -82,12 +82,7 @@
 
 
 <script>
-import AddComponentsBtn from '../AddComponents/AddComponentsBtn.vue';
-
 export default {
-components: {
-AddComponentsBtn,
-},
 data() {
     return {
     inputNum: '',
