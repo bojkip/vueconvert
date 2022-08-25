@@ -142,7 +142,7 @@ export default {
                 this.squareDecimeterResult = parseFloat(Math.pow(this.inputNum, this.userPow))* 0.0001;
                 this.squareCentimeterResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.01;
                 this.squareMilimeterResult = parseFloat(Math.pow(this.inputNum, this.userPow));
-                this.hectareResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.01;
+                this.hectareResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0000000001;
                 this.acreResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.00000000024711;
                 this.areResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.00000001;
                 this.squareMileResult = parseFloat(Math.pow(this.inputNum, this.userPow)) / 2589988110336;
@@ -156,7 +156,7 @@ export default {
                 this.squareDecimeterResult = parseFloat(this.inputNum)* 0.0001;
                 this.squareCentimeterResult = parseFloat(this.inputNum) * 0.01;
                 this.squareMilimeterResult = parseFloat(this.inputNum);
-                this.hectareResult = parseFloat(this.inputNum) * 0.01;
+                this.hectareResult = parseFloat(this.inputNum) * 0.0000000001;
                 this.acreResult = parseFloat(this.inputNum) * 0.00000000024711;
                 this.areResult = parseFloat(this.inputNum) * 0.00000001;
                 this.squareMileResult = parseFloat(this.inputNum) / 2589988110336;

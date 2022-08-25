@@ -257,7 +257,7 @@ export default {
         this.mileResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.0000621371;
         this.yardResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.1093613298;
         this.feetResault = parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.3280839895;
-        this.inchResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.937007874;
+        this.inchResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 3.937007874;
         }
         else{
             this.meterResult = parseFloat(this.inputNum) * 0.1;
@@ -270,7 +270,7 @@ export default {
             this.mileResult = parseFloat(this.inputNum) * 0.0000621371;
             this.yardResult = parseFloat(this.inputNum) * 0.1093613298;
             this.feetResault = parseFloat(this.inputNum) * 0.3280839895;
-            this.inchResult = parseFloat(this.inputNum) * 0.937007874;
+            this.inchResult = parseFloat(this.inputNum) * 3.937007874;
         }
       }
       else if (this.valueIn === 'Meter(m)') {
@@ -425,7 +425,7 @@ export default {
         this.mileResult = parseFloat(Math.pow(this.inputNum, this.userPow));
         this.yardResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 1760;
         this.feetResault = parseFloat(Math.pow(this.inputNum, this.userPow)) * 5280;
-        this.inchResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 5280;
+        this.inchResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 63360;
         }
         else{
             this.meterResult = parseFloat(this.inputNum) * 1609.344;
@@ -438,7 +438,7 @@ export default {
             this.mileResult = parseFloat(this.inputNum);
             this.yardResult = parseFloat(this.inputNum) * 1760;
             this.feetResault = parseFloat(this.inputNum) * 5280;
-            this.inchResult = parseFloat(this.inputNum) * 5280;
+            this.inchResult = parseFloat(this.inputNum) * 63360;
         }
       }
 

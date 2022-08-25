@@ -123,14 +123,6 @@ export default {
                     this.celsiusResult = parseFloat(this.inputNum) * (-272.15);
                 }
             }
-            else if (this.valueIn === 'Kelvin(K)' && this.valueOut === 'Fahrenheit(F)') {
-                if (this.userPow != ''){
-                    return parseFloat(Math.pow(this.inputNum, this.userPow))  * (-457.87);
-                }
-                else {
-                    return parseFloat(this.inputNum)  * (-457.87);
-                }
-            }
             else{
                 this.fahrenheitResult = '' ;
                 this.kelvinResult = '' ;

@@ -279,8 +279,8 @@ export default {
                 this.mililiterResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000000000000000;
                 this.gallonUsResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 264172052358;
                 this.cupUsResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 4226752837730;
-                this.tablespoonResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 4226752837730;
-                this.teaspoonResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 202.88413621;
+                this.tablespoonResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 20288413621106030;
+                this.teaspoonResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 67628045403686;
                 }
                 else{
                     this.cubicMeterResult = parseFloat(this.inputNum) * 1000000000;
@@ -293,8 +293,8 @@ export default {
                     this.mililiterResult = parseFloat(this.inputNum) * 1000000000000000;
                     this.gallonUsResult = parseFloat(this.inputNum) * 264172052358;
                     this.cupUsResult = parseFloat(this.inputNum) * 4226752837730;
-                    this.teaspoonResult = parseFloat(this.inputNum) * 4226752837730;
-                    this.tablespoonResult = parseFloat(this.inputNum) * 202.88413621;
+                    this.teaspoonResult = parseFloat(this.inputNum) * 202884136211060;
+                    this.tablespoonResult = parseFloat(this.inputNum) * 67628045403686;
                 }
             }
             else if (this.valueIn === 'Mililiter(ml)') {

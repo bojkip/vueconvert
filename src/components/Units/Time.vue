@@ -111,7 +111,7 @@ export default {
             else if (this.valueIn === 'Microsecond(μs)') {
                 if (this.userPow != ''){
                     this.microsecondResult = parseFloat(Math.pow(this.inputNum, this.userPow));
-                    this.millisecondResult = parseFloat(Math.pow(this.inputNum, this.userPow)) / 1000000;
+                    this.millisecondResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 0.001;
                     this.mimuteResult = parseFloat(Math.pow(this.inputNum, this.userPow)) / 60000000;
                     this.secondResult = parseFloat(Math.pow(this.inputNum, this.userPow)) * 1000;
                     this.hourdResult = parseFloat(Math.pow(this.inputNum, this.userPow)) / 3600000000;
@@ -120,7 +120,7 @@ export default {
                 }
                 else {
                     this.microsecondResult = parseFloat(this.inputNum);
-                    this.millisecondResult = parseFloat(this.inputNum) / 1000000;
+                    this.millisecondResult = parseFloat(this.inputNum) * 0.001;
                     this.secondResult = parseFloat(this.inputNum) * 1000;
                     this.mimuteResult = parseFloat(this.inputNum) / 60000000;
                     this.hourdResult = parseFloat(this.inputNum) / 3600000000;
